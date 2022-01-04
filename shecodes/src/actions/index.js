@@ -7,7 +7,20 @@ import imdb from "../apis/imdb";
 // when thunk sees we return a function it will call it with dispatch (=power to change data on the redux side) and getState (=vise versa) functions:
 
 export const fetchData = () => async (dispatch, getState) => {
+//getState is not used here and is passed as parameter just for better personal learning
   const response = await imdb.get("/");
-
+//I dont need to use return in a function (thus - when I use thunk). instead I  can easily write like below.
+//dispatch here is being used instead of return (return{type,payload})! 
   dispatch({ type: "FETCHED_DATA", payload: response.results });
 };
+
+
+// unshortened way of writing the above action would be the following: as we see - we have a function inside the fetchData action, which is possible thanks to using thunk.
+
+//export const fetchData = () => {
+//     return async function(dispatch, getState){
+//         const response = await imdb.get("/");
+
+//         dispatch({ type: "FETCHED_DATA", payload: response.results });
+//     }
+// }
