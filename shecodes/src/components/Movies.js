@@ -4,6 +4,9 @@ import { fetchData } from '../actions'
 
 
 export default class Movies extends Component {
+    ComponentDidMount(){
+        this.props.fetchData();
+    }
     render() {
         return (
             <div>
