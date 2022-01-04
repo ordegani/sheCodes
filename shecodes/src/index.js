@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
+//connect thhunk to our redux store itself by importing applyMiddleware:
+import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+    <Provider store={store}>
+<App />
+</Provider>
+, document.querySelector("#root"));
