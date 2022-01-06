@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-//connect thhunk to our redux store itself by importing applyMiddleware:
+//connect thunk to our redux store itself by importing applyMiddleware:
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
