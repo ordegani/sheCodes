@@ -1,4 +1,4 @@
-export const movies = (state = [], action) => {
+ const movies = (state = [], action) => {
   if (action.type === "FETCHED_DATA") {
     return action.payload;
   }
@@ -17,3 +17,4 @@ export const movies = (state = [], action) => {
 //             return state;
 // }
 // };
+export default movies;

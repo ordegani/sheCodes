@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import moviesReducer from "./moviesReducer";
+import movies from "./moviesReducer";
 
 //seperate the reducers to different files (for good order in big projects)
 //redusers must be pure!! It can only use it's two parameters (=the previous state and the action value) to decide what to do!
@@ -10,5 +10,5 @@ import moviesReducer from "./moviesReducer";
 // see https://www.udemy.com/course/react-redux/learn/lecture/12586898#overview minute 1:30 - yellow and green table
 
 export default combineReducers({
-    movies: moviesReducer
+    movies: movies
 });
