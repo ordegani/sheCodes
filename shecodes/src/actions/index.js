@@ -11,7 +11,7 @@ export const fetchData = () => async (dispatch, getState) => {
   const response = await imdb.get("/");
   //I dont need to use return in a function (thus - when I use thunk). instead I  can easily write like below.
   //dispatch here is being used instead of return (return{type,payload})!
-  dispatch({ type: "FETCHED_DATA", payload: response.results });
+  dispatch({ type: "FETCHED_DATA", payload: response?.data?.results });
 };
 
 // unshortened way of writing the above action would be the following: as we see - we have a function inside the fetchData action, which is possible thanks to using thunk.
