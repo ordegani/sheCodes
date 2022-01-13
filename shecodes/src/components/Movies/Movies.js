@@ -1,7 +1,7 @@
-import React from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../../actions";
-import { useEffect } from "react";
+import { React, useEffect } from "react";
+import "Movies.css";
 
 const Movies = (props) => {
   useEffect(() => {
