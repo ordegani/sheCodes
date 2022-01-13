@@ -1,5 +1,5 @@
 import React from 'react'
-import Movies from './Movies';
+import Movies from './Movies/Movies';
 
 const App = () =>{
     return <div> App  

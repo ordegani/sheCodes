@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchData } from "../actions";
+import { fetchData } from "../../actions";
 import { useEffect } from "react";
 
 const Movies = (props) => {
