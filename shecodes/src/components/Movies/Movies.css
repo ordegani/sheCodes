@@ -29,16 +29,19 @@
   .movie_item > img {
     border-radius: 60px 60px 60px 60px;
   }
-  .movie_item > p {
-    width: 90%;
-  }
   .movie_rating {
-    border: 1px solid yellow;
+    border: 1px solid var(--main);
     border-radius: 60px;
     padding: 5px;
   }
+  .movie_releaseDate{
+    margin-top: 3vh;
+  }
+  .movie_item > p {
+    width: 90%;
+  }
   .movie_item > button {
     border-radius: 60px;
-    color: yellow;
+    color: var(--main);
     background-color: black;
   }
