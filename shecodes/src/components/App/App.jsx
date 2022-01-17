@@ -1,9 +1,9 @@
 import React from 'react';
 import Movies from '../Movies/Movies';
-import "App.css";
+import "./App.css";
 
 const App = () =>{
-    return <div> App  
+    return <div>   
         <Movies/>
         </div>
 };
