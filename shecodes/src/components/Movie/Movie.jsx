@@ -1,5 +1,5 @@
 import React from "react";
-import "../Movies/MoviesList.css";
+import "./Movie.css";
 
 const Movie = ({
   movie_title,
