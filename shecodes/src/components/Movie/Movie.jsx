@@ -15,10 +15,10 @@ const Movie = ({
         {movie_title ? movie_title : movie_name}
       </div>
       <img src={movie_posterPath} width="300" height="300" alt="img"></img>
-      <div className="movie_rating">{movie_voteAverage}</div>
-      <div className="movie_releaseDate">{movie_releaseDate}</div>
+      <div className="movie_releaseDate">released in: {movie_releaseDate}</div>
+      <div className="movie_rating">rating: {movie_voteAverage}</div>
+     <button className="movie_selectButton">♥</button>
       <p className="movie_overview">{movie_overview}</p>
-      <button className="movie_selectButton">select</button>
     </div>
   );
 };
