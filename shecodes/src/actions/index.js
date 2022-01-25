@@ -1,4 +1,6 @@
+import { bindActionCreators } from "redux";
 import imdb from "../apis/imdb";
+import favoriteReducer from "../reducers/favoritesReducer";
 
 //avoid the error message "use custom middleware for async actions" by using redux thunk
 // (redux thunk not used onle for async functions - but does that a lot)
@@ -23,3 +25,11 @@ export const fetchData = () => async (dispatch, getState) => {
 //         dispatch({ type: "FETCHED_DATA", payload: response.results });
 //     }
 // }
+
+export const saveMovie = (movie) => {
+
+  return{
+  action: "MOVIE_SAVED_TO_FAVORITES",
+  payload: movie,
+};
+}
