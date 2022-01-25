@@ -6,11 +6,11 @@ import "./App.css";
 const App = () => {
   return (
     <div className="home">
-    <div>
-      <Movies></Movies>
-      <Favorite></Favorite>
+      <div>
+        <Movies></Movies>
+        <Favorite></Favorite>
 
-    </div>
+      </div>
     </div>
   );
 };
