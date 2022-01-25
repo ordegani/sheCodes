@@ -8,7 +8,7 @@ const Movie = ({
   movie_voteAverage,
   movie_releaseDate,
   movie_overview,
-  onFavoriteClick}) => {
+  onFavoriteClick }) => {
   return (
     <div className="movie_item">
       <div className="movie_title">
@@ -23,9 +23,9 @@ const Movie = ({
         onClick={() => onFavoriteClick()}
         type="Submit"
       >*
-        
-      </button>  
-        </div>
+
+      </button>
+    </div>
   );
 };
 export default Movie;
