@@ -14,7 +14,7 @@ const MoviesList = (props) => {
   const list = () => {
     return props.movies.map((movie) => {
       return (
-        
+
         <Movie
           movie_title={movie.title}
           movie_name={movie.name}
@@ -22,11 +22,9 @@ const MoviesList = (props) => {
           movie_voteAverage={movie.vote_average}
           movie_releaseDate={movie.release_date}
           movie_overview={movie.overview}
-          onFavoriteClick={()=>props.saveMovie(movie)}
-          // onClick={() => props.saveMovie()}
-
+          onFavoriteClick={() => props.saveMovie(movie)}
         ></Movie>
-        
+
       );
     });
   };
@@ -41,9 +39,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    saveMovie: (movie) =>{
-    console.log(movie);
-      dispatch({ type: "MOVIE_SAVED_TO_FAVORITES", payload: movie })},
+    saveMovie: (movie) => {
+      console.log(movie);
+      dispatch({ type: "MOVIE_SAVED_TO_FAVORITES", payload: movie })
+    },
     fetchData: async () => {
       const response = await imdb.get("./");
       return dispatch({
@@ -51,9 +50,9 @@ const mapDispatchToProps = (dispatch) => {
         payload: response?.data?.results,
       });
     }
-  }}
+  }
+}
 
-  export default connect(
-    mapStateToProps, mapDispatchToProps
-    // , mapDispatchToProps
-    )(MoviesList);
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(MoviesList);
