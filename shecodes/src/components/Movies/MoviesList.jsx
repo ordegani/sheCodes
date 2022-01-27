@@ -1,5 +1,4 @@
 import imdb from "../../apis/imdb";
-
 import { connect } from "react-redux";
 import { fetchData, saveMovie } from "../../actions";
 import { React, useEffect } from "react";

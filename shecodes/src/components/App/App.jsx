@@ -1,5 +1,5 @@
 import React from "react";
-import FavoriteList from "../Favorite";
+import FavoriteList from "../FavoritesList/Favorite";
 import MoviesList from "../Movies/MoviesList";
 import "./App.css";
 

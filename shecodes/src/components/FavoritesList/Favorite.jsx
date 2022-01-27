@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import Movie from "./Movie/Movie";
+import Movie from "../Movie/Movie";
 import "./Movies/MoviesList.css";
 
-//which way is better - line 15 or line 24?
+//which way is better - line 15 or line 28?
 //TODO - deleteMovie
 
 const FavoritesList = (props) => {
@@ -22,8 +22,10 @@ const FavoritesList = (props) => {
                     movie_releaseDate={movie.release_date}
                     movie_overview={movie.overview}
                     onFavoriteClick={() => props.deleteMovie(movie)}
-
                 ></Movie>);
+
+
+            // option B:
             // return (
             //     <div className="movie_item">
             //         <div className="favorites_listContainer">
@@ -35,6 +37,8 @@ const FavoritesList = (props) => {
             //         </div>
             //     // </div>
             // );
+
+
         });
     }
     return (<div className="movies_listContainer">{Flist()}</div>);
