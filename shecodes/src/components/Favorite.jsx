@@ -6,7 +6,7 @@ import "./Movies/MoviesList.css";
 //which way is better - line 15 or line 24?
 //TODO - deleteMovie
 
-const Favorites = (props) => {
+const FavoritesList = (props) => {
     const Flist = () => {
         if (props.favorites === []) {
             return "empty"
@@ -51,4 +51,4 @@ const mapStateToProps = (state) => {
 
 
 export default connect(mapStateToProps,
-)(Favorites);
+)(FavoritesList);
