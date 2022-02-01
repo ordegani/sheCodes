@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
-import "./Movies/MoviesList.css";
+import "../Movies/MoviesList.css";
 
 //which way is better - line 15 or line 28?
 //TODO - deleteMovie

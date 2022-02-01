@@ -1,17 +1,19 @@
 import React from "react";
 import FavoriteList from "../FavoritesList/Favorite";
 import MoviesList from "../Movies/MoviesList";
+import Navbar from "../Navbar/Navbar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 
 const App = () => {
   return (
-    <div className="home">
-      <div>
-        <MoviesList></MoviesList>
-        <FavoriteList></FavoriteList>
-
-      </div>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact element={<MoviesList />} />
+        <Route path='/favorites' exact element={<FavoriteList />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
