@@ -11,10 +11,11 @@ const MoviesList = (props) => {
   }, []);
 
   const list = () => {
-    return props.movies.map((movie) => {
+    return props.movies.map((movie, index) => {
       return (
 
         <Movie
+          key={index}
           movie_title={movie.title}
           movie_name={movie.name}
           movie_posterPath={"https://image.tmdb.org/t/p/original" + movie.poster_path}
@@ -36,10 +37,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, favorites) => {
   return {
     saveMovie: (movie) => {
-      console.log(movie);
       dispatch({ type: "MOVIE_SAVED_TO_FAVORITES", payload: movie })
     },
     fetchData: async () => {

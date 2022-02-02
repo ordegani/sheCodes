@@ -1,16 +1,9 @@
-/* .navbarUl {
+.navbarUl {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
   }
-  
-  .link {
-    text-decoration: none;
-    font-size: medium;
-    border-radius: 60px;
-    color: rgb(77, 2, 77);
-  }
-  Li::first-letter {
+  li::first-letter {
     color: yellow;
-  } */
+  }

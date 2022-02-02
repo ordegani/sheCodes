@@ -33,3 +33,10 @@ export const saveMovie = (movie) => {
   payload: movie,
 };
 }
+
+export const deleted = (movie) => {
+  return {
+    action:"MOVIE_DELETED", 
+    payload: movie,
+  }
+}

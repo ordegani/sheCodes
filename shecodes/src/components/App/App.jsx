@@ -1,5 +1,5 @@
 import React from "react";
-import FavoriteList from "../FavoritesList/Favorite";
+import FavoriteList from "../FavoritesList/FavoriteList";
 import MoviesList from "../Movies/MoviesList";
 import Navbar from "../Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

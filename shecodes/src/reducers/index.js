@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import movies from "./moviesReducer";
 import favoriteReducer from "./favoritesReducer";
+// import deletedReducer from "./deletedReducer";
 
 //seperate the reducers to different files (for good order in big projects)
 //redusers must be pure!! It can only use it's two parameters (=the previous state and the action value) to decide what to do!
@@ -13,4 +14,5 @@ import favoriteReducer from "./favoritesReducer";
 export default combineReducers({
     movies: movies,
     favorites: favoriteReducer,
+    // deleted: deletedReducer,
 });
