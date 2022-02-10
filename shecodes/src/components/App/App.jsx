@@ -8,18 +8,18 @@ import "./App.css";
 const App = () => {
 
 //tester:
-  function App() {
-    useEffect(() => {
-      const fetch = async () => {
-        const data = await axios.get("http://localhost:5000/blogs");
-        console.log(data);
-      };
-      fetch();
-    }, [blogs])}
-//
-axios
-.post("http://localhost:5000/blogs", blog)
-.then((res) => console.log(res));
+  // function App() {
+    // useEffect(() => {
+//       const fetch = async () => {
+//         const data = await axios.get("http://localhost:5000/blogs");
+//         console.log(data);
+//       };
+//       fetch();
+//     }, [blogs])}
+// //
+// axios
+// .post("http://localhost:5000/blogs", blog)
+// .then((res) => console.log(res));
 
   return (
     <BrowserRouter>
