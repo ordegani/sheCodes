@@ -20,11 +20,13 @@ app.post('/', (req, res) => {
     res.send(value)
     // add to db 
 })
+
 app.post('/', (req, res) => {
     console.log(req.body);
 
     res.send(req.value)
     // add to db 
 })
+
 app.listen(port, () => console.log("connected to port #: " + port));
 
