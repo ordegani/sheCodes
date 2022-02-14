@@ -1,24 +1,20 @@
 {
-  "name": "sheCodes",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "react-router-dom": "^6.2.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ordegani/sheCodes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ordegani/sheCodes/issues"
-  },
-  "homepage": "https://github.com/ordegani/sheCodes#readme"
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15"
+  }
 }
