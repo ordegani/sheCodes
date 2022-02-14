@@ -17,8 +17,7 @@
     "mongoose": "^6.2.1",
     "nodemon": "^2.0.15"
   },
-  "engines": {
-    "npm": "6.14.9",
-    "node": "v14.15.3"
+    "engines": {
+      "node": "16.x"
   }
 }
