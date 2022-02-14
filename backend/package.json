@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react-router-dom": "^6.2.1"
+  },
+  "engines": {
+    "npm": "6.14.9",
+    "node": "14.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ordegani/sheCodes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ordegani/sheCodes/issues"
+  },
+  "homepage": "https://github.com/ordegani/sheCodes#readme"
+}
