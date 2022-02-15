@@ -13,7 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "build": "cd shecodes && npm run build",
-    "install client": "cd shecodes && npm install",
+    "install-client": "cd shecodes && npm install",
     "server": "nodemon index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
