@@ -3,6 +3,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "concurrently": "^7.0.0",
     "react-router-dom": "^6.2.1"
   },
   "engines": {
@@ -11,10 +12,14 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cd shecodes && npm run build",
+    "install client": "cd shecodes && npm install",
+    "server": "nodemon index.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix shecodes\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix shecodes\""
   },
   "repository": {
     "type": "git",
