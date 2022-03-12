@@ -23,6 +23,7 @@ const FavoritesList = (props) => {
                     movie_releaseDate={movie.release_date}
                     movie_overview={movie.overview}
                     onFavoriteClick={() => props.deleted(movie)}
+                    text = "remove"
                 ></Movie>);
 
 

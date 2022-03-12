@@ -12,6 +12,12 @@ const Navbar = () => {
                 <li>
                     <Link className='link' to="/favorites">Favorites</Link>
                 </li>
+                <li>
+                    <Link className='link' to="/blogs">Blogs</Link>
+                </li>
+                <li>
+                    <Link className='link' to="/create_blog">Create Blog</Link>
+                </li>
             </ul>
         </div>
     );

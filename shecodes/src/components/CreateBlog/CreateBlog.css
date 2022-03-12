@@ -1,0 +1,22 @@
+
+button{
+    color: black;
+    background-color: yellow;
+}
+label{
+    color:yellow;
+}
+.newBlogContainer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+   margin-top: 10vh;
+
+}
+.newBlog{
+    height: 30vh;
+    width: 30vw;
+    margin: 10px;
+    border: 1px yellow double;
+}
+
