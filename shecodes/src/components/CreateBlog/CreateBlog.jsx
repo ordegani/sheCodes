@@ -4,10 +4,10 @@ import "./CreateBlog.css";
 
 const CreateBlog = () => {
     const [value, setValue] = useState('');
+    const [name, setName] = useState('')
     const onBlogClick =
-        //  const blog = box input
         async () => {
-            await axios.post('http://localhost:5000/', { value })
+            await axios.post('http://localhost:5000/blogs', { name: name, blog: value })
             console.log(value);
         }
     return (
@@ -15,8 +15,9 @@ const CreateBlog = () => {
             <form>
                 <label>
                     Write ▶</label>
-                    <input className="newBlog" type="text" required value={value} onChange={(e) => setValue(e.target.value)} />
-               
+                <input className="newName" type="text" required  onChange={(e) => setName(e.target.value)} />
+                <input className="newBlog" type="text" required  onChange={(e) => setValue(e.target.value)} />
+
                 <button onClick={onBlogClick}> POST 🎬  </button>
             </form>
         </div>

@@ -9,7 +9,7 @@ label{
 .newBlogContainer{
     display: flex;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row-reverse;
    margin-top: 10vh;
 
 }
