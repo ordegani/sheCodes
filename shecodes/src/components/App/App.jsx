@@ -15,10 +15,10 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' exact element={<MoviesList />} />
+        <Route path='/' exact element={<BlogsList />} />
+        <Route path='/movies' exact element={<MoviesList />} />
         <Route path='/favorites' exact element={<FavoriteList />} />
-        <Route path='/blogs' exact element={<BlogsList/>} />
-        <Route path='/create_blog' exact element={<CreateBlog/>} />
+        <Route path='/create_blog' exact element={<CreateBlog />} />
       </Routes>
     </BrowserRouter>
   );
