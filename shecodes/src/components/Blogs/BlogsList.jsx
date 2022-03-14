@@ -1,10 +1,8 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 
-// tester:
 const BlogsList = () => {
   const [blogs, setBlogs] = useState([])
-
   useEffect(() => {
     const fetchBlogs = async () => {
       const data = await axios.get("http://localhost:5000/blogs");
