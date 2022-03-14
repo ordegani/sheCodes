@@ -1,4 +1,4 @@
-import blogs from "./schemas/blogs.js";
+import blogs from "./schemas/blog.js";
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -18,7 +18,7 @@ const connection_url = 'mongodb+srv://shecodes:shecodes@cluster0.5kxnj.mongodb.n
 app.post ('/blogs', (req, res)=>{
   const DBblog = req.body;
 
-  blogs.create(BDblog, (err, data)=>{
+  blogs.create(DBblog, (err, data)=>{
     if (err){
       res.status(500).send(err)
     }else{
