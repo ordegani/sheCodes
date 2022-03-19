@@ -1,22 +1,39 @@
-
-button{
-    color: black;
-    background-color: yellow;
+.new_blogContainer{
+    display: grid;
+    justify-content: center;
 }
-label{
-    color:yellow;
+.form{
+    margin-top: 2vh;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: repeat(6, fr);
+grid-template-rows:1fr 1fr 8fr 1fr; 
+grid-row-gap: 2vh;
 }
-.newBlogContainer{
-    display: flex;
+.form > :nth-child(1){
+    color: yellow;
+    grid-column-start: 3;
+grid-column-end: 5;
+text-align: center;
+}
+.form > :nth-child(2){
+grid-area: 2/3/2/5;
+}
+.form > :nth-child(3){
+    grid-area: 3/1/4/7;
     text-align: center;
-    flex-direction: row-reverse;
-   margin-top: 10vh;
+position: relative;
+    }
+    .form > :nth-child(3)::placeholder{
+position: absolute;
+left: 0;
+top:0;
 
-}
-.newBlog{
-    height: 30vh;
-    width: 30vw;
-    margin: 10px;
-    border: 1px yellow double;
-}
+        }
 
+    .form > :nth-child(4){
+        grid-area: 4/3/4/5;
+        background-color: yellow;
+        color: yellow;
+        background-color: transparent;
+        }
