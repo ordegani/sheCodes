@@ -12,7 +12,7 @@ const CreateBlog = () => {
         }
     return (
         <div className="new_blogContainer">
-            <form className= "form">
+            <form className="form">
                 <label>
                     Write ▶</label>
                 <input className="newName" type="text" required placeholder="your blog title here" onChange={(e) => setName(e.target.value)} />

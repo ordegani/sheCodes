@@ -1,5 +1,6 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
+import "./BlogsList.css";
 
 //TODO delete
 const BlogsList = () => {
@@ -17,12 +18,12 @@ const BlogsList = () => {
     return (
       blogs.map((blog, index) => {
         return (
-          <div>
+          <div className="blog">
             <p>{blog.name}</p>
             <p>{blog.blog}</p>
           </div>)
       }))
   }
-  return (<div className="movies_listContainer">{Blist()}</div>);
+  return (<div className="blogs_listContainer">{Blist()}</div>);
 }
 export default BlogsList;

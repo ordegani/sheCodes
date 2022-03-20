@@ -1,0 +1,13 @@
+.blogs_listContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2vh;
+}
+.blog{
+    color: white;
+    min-width: 45%;
+    text-align: center;
+}

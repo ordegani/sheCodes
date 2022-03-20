@@ -7,33 +7,28 @@
     width: 75vw;
     display: grid;
     grid-template-columns: repeat(6, fr);
-grid-template-rows:1fr 1fr 8fr 1fr; 
-grid-row-gap: 2vh;
+    grid-template-rows:1fr 1fr 8fr 1fr; 
+    grid-row-gap: 2vh;
 }
 .form > :nth-child(1){
     color: yellow;
     grid-column-start: 3;
-grid-column-end: 5;
-text-align: center;
+    grid-column-end: 5;
+    text-align: center;
 }
 .form > :nth-child(2){
-grid-area: 2/3/2/5;
+    grid-area: 2/3/2/5;
 }
 .form > :nth-child(3){
     grid-area: 3/1/4/7;
     text-align: center;
-position: relative;
-    }
-    .form > :nth-child(3)::placeholder{
-position: absolute;
-left: 0;
-top:0;
-
-        }
-
-    .form > :nth-child(4){
-        grid-area: 4/3/4/5;
-        background-color: yellow;
-        color: yellow;
-        background-color: transparent;
-        }
+}
+.form > :nth-child(3)[type=text]:focus {
+   color: rgb(43, 41, 41);
+}
+.form > :nth-child(4){
+    grid-area: 4/3/4/5;
+    background-color: yellow;
+    color: yellow;
+    background-color: transparent;
+}
