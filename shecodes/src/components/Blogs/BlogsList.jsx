@@ -16,7 +16,7 @@ const BlogsList = () => {
 
   const Blist = () => {
     return (
-      blogs.map((blog, index) => {
+      blogs.map((blog) => {
         return (
           <div className="blog">
             <p>{blog.name}</p>
