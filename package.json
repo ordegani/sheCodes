@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "npm run build",
+    "build": "cd shecodes && npm run build",
     "install-client": "cd shecodes && npm install",
     "server": "nodemon index.js",
     "test": "react-scripts test",
