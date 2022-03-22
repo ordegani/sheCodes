@@ -16,12 +16,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "cd shecodes && npm run build",
+    "build": "npm install && cd shecodes && npm install && npm run build",
     "install-client": "cd shecodes && npm install",
     "server": "nodemon index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run install-client && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix shecodes\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix shecodes\""
   },
