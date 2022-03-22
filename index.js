@@ -38,11 +38,11 @@ app.get('/blogs', (req, res)=>{
   })
 })
 // DB config
-mongoose.connect(connection_url, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect(connection_url, {
+//   useNewUrlParser: true,
+//   useCreateIndex: true,
+//   useUnifiedTopology: true,
+// });
 //listener
 app.listen(port, () => console.log("connected to port #: " + port));
 
