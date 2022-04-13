@@ -23,7 +23,6 @@ const FavoritesList = (props) => {
                     text="remove"
                 ></Movie>);
 
-
         });
     }
     return (<div className="movies_listContainer">{Flist()}</div>);
