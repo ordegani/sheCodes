@@ -23,20 +23,6 @@ const FavoritesList = (props) => {
                     text="remove"
                 ></Movie>);
 
-//which way is better - line 15 or line 28?
-            // option B:
-            // return (
-            //     <div className="movie_item">
-            //         <div className="favorites_listContainer">
-            //             <div className="favorite" key={favorite.id}>
-            //                 <div className="movie_title">⭐  </div>
-
-
-            //             </div>
-            //         </div>
-            //     // </div>
-            // );
-
 
         });
     }
