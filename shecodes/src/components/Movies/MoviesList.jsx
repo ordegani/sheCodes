@@ -22,7 +22,7 @@ const MoviesList = (props) => {
           movie_releaseDate={movie.release_date}
           movie_overview={movie.overview}
           onFavoriteClick={() => props.saveMovie(movie)}
-          text = "❤"
+          text="❤"
         ></Movie>
 
       );
