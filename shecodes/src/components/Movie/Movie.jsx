@@ -23,7 +23,7 @@ const Movie = ({
         onClick={() => onFavoriteClick()}
         type="Submit"
       >
-   {text}
+        {text}
       </button>
       <p className="movie_overview">{movie_overview}</p>
     </div>

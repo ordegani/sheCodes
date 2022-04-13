@@ -3,9 +3,6 @@ import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movies/MoviesList.css";
 
-//which way is better - line 15 or line 28?
-
-
 const FavoritesList = (props) => {
     const Flist = () => {
         if (props.favorites === []) {
@@ -23,7 +20,7 @@ const FavoritesList = (props) => {
                     movie_releaseDate={movie.release_date}
                     movie_overview={movie.overview}
                     onFavoriteClick={() => props.deleted(movie)}
-                    text = "remove"
+                    text="remove"
                 ></Movie>);
 
 
