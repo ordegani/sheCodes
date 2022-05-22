@@ -12,7 +12,6 @@ const MoviesList = (props) => {
   const list = () => {
     return props.movies.map((movie, index) => {
       return (
-
         <Movie
           key={index}
           movie_title={movie.title}
