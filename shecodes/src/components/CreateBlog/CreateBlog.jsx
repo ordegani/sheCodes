@@ -7,7 +7,7 @@ const CreateBlog = () => {
     const [name, setName] = useState('')
     const onBlogClick =
         async () => {
-            await axios.post('http://localhost:5000/blogs', { name: name, blog: value})
+            await axios.post('http://localhost:5000/blogs', { name: name, blog: value })
             console.log(value);
         }
     return (
