@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import axios from "axios";
 import "./CreateBlog.css";
 //TODO edit appearance of "newBlog"
+
 const CreateBlog = () => {
     const [value, setValue] = useState('');
     const [name, setName] = useState('')
