@@ -1,8 +1,9 @@
 import blogs from "./schemas/blog.js";
-import { } from 'dotenv/config';
+// import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+
 const app = express();
 // import path from 'path';
 // const { request } = require('http');
@@ -12,7 +13,7 @@ const app = express();
 // app.use(express.static(publicDirectory))
 app.use(cors())
 app.use(express.json())
-const port = 5000;
+const port = 9000;
 //config
 const connection_url = process.env.connection_url;
 // API endpoints
