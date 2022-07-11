@@ -7,7 +7,10 @@ const Navbar = () => {
         <div>
             <ul className="navbarUl">
                 <li>
-                    <Link className='link' to="/movies">Movies</Link>
+                    <Link className='link' to="/movies">Top Rated</Link>
+                </li>
+                <li>
+                    <Link className='link' to="/search">Search</Link>
                 </li>
                 <li>
                     <Link className='link' to="/favorites">Favorites</Link>

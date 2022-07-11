@@ -1,5 +1,6 @@
 import React from "react";
 import FavoriteList from "../FavoritesList/FavoriteList";
+import SearchForFilm from "../Search/Search";
 import MoviesList from "../Movies/MoviesList";
 import Navbar from "../Navbar/Navbar";
 import BlogsList from "../Blogs/BlogsList";
@@ -15,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path='/' exact element={<BlogsList />} />
         <Route path='/movies' exact element={<MoviesList />} />
+        <Route path='/search' exact element={<SearchForFilm />} />
         <Route path='/favorites' exact element={<FavoriteList />} />
         <Route path='/create_blog' exact element={<CreateBlog />} />
       </Routes>

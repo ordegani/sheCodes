@@ -13,7 +13,7 @@ const app = express();
 // app.use(express.static(publicDirectory))
 app.use(cors())
 app.use(express.json())
-const port = 9000;
+const port = 5000;
 //config
 const connection_url = process.env.connection_url;
 // API endpoints
