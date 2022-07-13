@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 
-const SearchForFilm = () => {
+const SearchForFilm = (props) => {
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState(search);
@@ -20,7 +21,7 @@ const SearchForFilm = () => {
       `http://www.omdbapi.com/?t=${query}&apikey=${apikey}`
     );
     const data = await response.json();
-
+    props.setToState(data);
     setMovie(data);
   };
   console.log(movie);
@@ -59,9 +60,38 @@ const SearchForFilm = () => {
             <p>Rating: {movie.imdbRating}</p>;
           }, [movie])}
         </div>
+        <button
+        className="save_movie"
+        onClick={() => props.saveMovie(props.movies)}
+        type="Submit"
+      >
+     SAVE
+      </button>
       </div>
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies,
+  };
+};
 
-export default SearchForFilm;
+const mapDispatchToProps = (dispatch, favorites) => {
+  return {
+    saveMovie: (movie) => {
+      dispatch({ type: "MOVIE_SAVED_TO_FAVORITES", payload: movie })
+    },
+    setToState: (movie) => {
+    
+       dispatch({
+        type: "FETCHED_DATA",
+        payload: movie,
+      });
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(SearchForFilm);

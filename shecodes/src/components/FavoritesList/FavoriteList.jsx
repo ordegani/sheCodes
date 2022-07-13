@@ -9,13 +9,14 @@ const FavoritesList = (props) => {
             return "empty"
         }
         console.log(props.favorites);
+        console.log(props.movies);
         return props.favorites.map((movie, index) => {
             return (
                 <Movie
                     key={index}
-                    movie_title={movie.title}
+                    movie_title={movie.title?movie.title: movie.Title}
                     movie_name={movie.name}
-                    movie_posterPath={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+                    movie_posterPath={movie.poster_path? "https://image.tmdb.org/t/p/original" + movie.poster_path:movie.Poster}
                     movie_voteAverage={movie.vote_average}
                     movie_releaseDate={movie.release_date}
                     movie_overview={movie.overview}
@@ -32,6 +33,7 @@ const FavoritesList = (props) => {
 const mapStateToProps = (state) => {
     return {
         favorites: state.favorites,
+        movies: state.movies
     };
 }
 

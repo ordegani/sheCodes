@@ -7,7 +7,7 @@ import Movie from "../Movie/Movie";
 const MoviesList = (props) => {
   useEffect(() => {
     props.fetchData();
-  }, []);
+  }, [props.movies]);
 
   const list = () => {
     return props.movies.map((movie, index) => {
