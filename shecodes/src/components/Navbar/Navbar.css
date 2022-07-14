@@ -7,3 +7,6 @@
   li::first-letter {
     color: yellow;
   }
+  .link:hover {
+    color: yellow;
+  }

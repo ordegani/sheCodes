@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import Movie from "../Movie/Movie";
+import "../Movie/Movie.css";
 
 const SearchForFilm = (props) => {
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState(search);
+  const [query, setQuery] = useState("toy story");
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -21,10 +23,11 @@ const SearchForFilm = (props) => {
       `http://www.omdbapi.com/?t=${query}&apikey=${apikey}`
     );
     const data = await response.json();
-    props.setToState(data);
     setMovie(data);
+    props.setToState(movie.Title);
   };
   console.log(movie);
+  console.log(props.favorites);
 
   useEffect(() => {
     getMovie();
@@ -45,7 +48,7 @@ const SearchForFilm = (props) => {
         </button>
       </form>
       <div className="SmovieContainer">
-        <div className="movieInformation">
+        {/* <div className="movieInformation">
           <h1>{movie.Title}</h1>
           <p>{movie.Director}</p>
           <img src={movie.Poster} alt="" />
@@ -59,7 +62,14 @@ const SearchForFilm = (props) => {
           {useEffect(() => {
             <p>Rating: {movie.imdbRating}</p>;
           }, [movie])}
-        </div>
+        </div> */}
+        <Movie 
+        // key={movie.imdbID}
+          movie_title={movie.Title}
+          movie_posterPath={movie.Poster}
+          onFavoriteClick={() => props.saveMovie(movie)}
+          text="❤"
+        ></Movie>
         <button
         className="save_movie"
         onClick={() => props.saveMovie(props.movies)}
@@ -74,6 +84,7 @@ const SearchForFilm = (props) => {
 const mapStateToProps = (state) => {
   return {
     movies: state.movies,
+    favorites: state.favorites,
   };
 };
 

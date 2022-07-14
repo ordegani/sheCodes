@@ -7,7 +7,7 @@ const Navbar = () => {
         <div>
             <ul className="navbarUl">
                 <li>
-                    <Link className='link' to="/movies">Top Rated</Link>
+                    <Link className='link' to="/">Top Rated</Link>
                 </li>
                 <li>
                     <Link className='link' to="/search">Search</Link>
@@ -16,7 +16,7 @@ const Navbar = () => {
                     <Link className='link' to="/favorites">Favorites</Link>
                 </li>
                 <li>
-                    <Link className='link' to="/">Blogs</Link>
+                    <Link className='link' to="/blogs">Blogs</Link>
                 </li>
                 <li>
                     <Link className='link' to="/create_blog">Create Blog</Link>

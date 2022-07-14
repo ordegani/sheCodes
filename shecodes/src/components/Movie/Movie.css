@@ -19,8 +19,8 @@
     margin: 10px;
   }
   .movie_rating {
-    border: 1px solid var(--main);
-    border-radius: 60px;
+    /* border: 1px solid var(--main);
+    border-radius: 60px; */
     margin: 10px;
     padding: 5px;
   }
