@@ -6,7 +6,7 @@ import "../Movie/Movie.css";
 const SearchForFilm = (props) => {
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("toy story");
+  const [query, setQuery] = useState("");
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -47,7 +47,7 @@ const SearchForFilm = (props) => {
           ▶
         </button>
       </form>
-      <div className="SmovieContainer">
+      <div className={query===""?"SmovieContainer":null}>
         {/* <div className="movieInformation">
           <h1>{movie.Title}</h1>
           <p>{movie.Director}</p>
