@@ -70,13 +70,13 @@ const SearchForFilm = (props) => {
           onFavoriteClick={() => props.saveMovie(movie)}
           text="❤"
         ></Movie>
-        <button
+        {/* <button
         className="save_movie"
         onClick={() => props.saveMovie(props.movies)}
         type="Submit"
       >
      SAVE
-      </button>
+      </button> */}
       </div>
     </div>
   );
