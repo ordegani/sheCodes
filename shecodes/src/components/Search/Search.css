@@ -1,0 +1,19 @@
+.Scontainer{   
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(255, 234, 0);
+}
+.inner_Scontainer{
+    /* display: flex;
+    justify-content: center; */
+    flex-direction: column;
+    border: 1px solid rgb(255, 234, 0);
+    width: fit-content
+}
+.search-form{
+    margin: 2rem;
+    border: 1px solid rgb(255, 234, 0);
+}
+.SmovieContainer{
+    border: 1px solid rgb(255, 234, 0);
+}

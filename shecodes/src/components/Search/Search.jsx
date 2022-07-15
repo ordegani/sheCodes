@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movie/Movie.css";
+import "./Search.css";
 
 const SearchForFilm = (props) => {
   const [movie, setMovie] = useState([]);
@@ -35,6 +36,7 @@ const SearchForFilm = (props) => {
 
   return (
     <div className="Scontainer">
+      <div className="inner_Scontainer">
       <form onSubmit={getSearch} className="search-form">
         <input
           className="search-field"
@@ -47,7 +49,7 @@ const SearchForFilm = (props) => {
           ▶
         </button>
       </form>
-      <div className={query===""?"SmovieContainer":null}>
+      <div className={query===""?"initial_SmovieContainer":"SmovieContainer"}>
         {/* <div className="movieInformation">
           <h1>{movie.Title}</h1>
           <p>{movie.Director}</p>
@@ -77,6 +79,7 @@ const SearchForFilm = (props) => {
       >
      SAVE
       </button> */}
+      </div>
       </div>
     </div>
   );
