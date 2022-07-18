@@ -1,4 +1,4 @@
-import imdb from "../../apis/imdb";
+import imdb from "../../api/imdb";
 import { connect } from "react-redux";
 import { React, useEffect } from "react";
 import "./MoviesList.css";
