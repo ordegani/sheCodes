@@ -59,7 +59,7 @@ const SearchForFilm = (props) => {
             ▶
           </button>
 
-          <p>Advanced search: </p>
+          <p style={{color:"rgb(77, 2, 77)"}}>Advanced search: </p>
 
           <input
             className="search-field2"
