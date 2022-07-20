@@ -10,28 +10,34 @@ const SearchForFilm = (props) => {
   const [query, setQuery] = useState("");
   const [yearQuery, setyearQuery] = useState("");
   const [yearSearch, setyearSearch] = useState("");
+  const [typeSearch, settypeSearch] = useState("");
+  const [typeQuery, settypeQuery] = useState("");
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
   };
-  const updateYearSearch = (m) => {
-    setyearSearch(m.target.value);
+  const updateYearSearch = (y) => {
+    setyearSearch(y.target.value);
+  };
+  const updatetypeSearch = (t) => {
+    settypeSearch(t.target.value);
   };
 
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-
+    settypeQuery(typeSearch);
     setyearQuery(yearSearch);
     setSearch("");
     setyearSearch("");
+    settypeSearch("");
   };
-/////////////////////////////////
+  /////////////////////////////////
   const getMovie = async () => {
     const apikey = `b8dd69ac`;
     const response = await fetch(
-      `http://www.omdbapi.com/?t=${query}&y=${yearQuery?yearQuery:"2022"}&apikey=${apikey}`
+      `http://www.omdbapi.com/?t=${query}&y=${yearQuery ? yearQuery : "2022"}&type=${typeQuery}&apikey=${apikey}`
     );
     const data = await response.json();
     setMovie(data);
@@ -39,7 +45,7 @@ const SearchForFilm = (props) => {
   };
   console.log(movie);
   console.log(props.favorites);
-////////////////////////////////
+  ////////////////////////////////
   useEffect(() => {
     getMovie();
   }, [query]);
@@ -58,17 +64,25 @@ const SearchForFilm = (props) => {
           <button className="search-button" type="Submit">
             ▶
           </button>
-
-          <p style={{color:"rgb(77, 2, 77)"}}>Advanced search: </p>
+          <br />
+          <h7 style={{ color: "rgb(77, 2, 77)" }}>Advanced search: </h7>
 
           <input
             className="search-field2"
-            placeholder="year"
+            placeholder="2022"
             type="text"
             onChange={updateYearSearch}
             value={yearSearch}
 
           />
+
+          <select className="search-field3" style={{ color: "grey" }} onChange={updatetypeSearch}>
+            <option value="movie">movie</option>
+            <option value="series">series</option>
+            <option value="episode">episode</option>
+          </select>
+          <div>
+          </div>
         </form>
 ///////////////////////////////////////////////////////////////////
 

@@ -3,12 +3,6 @@
     justify-content: center;
     border: 1px solid rgb(255, 234, 0);
 }
-.inner_Scontainer{
-    border: 1px solid rgb(255, 234, 0);
-}
-.inner_Scontainer >p{
-    color: rgb(255, 234, 0);
-}
 .search-form{
     margin: 2rem;
     border: 1px solid rgb(255, 234, 0);
@@ -19,6 +13,14 @@
    display: flex;
    justify-content: center;
 }
-.search-form2{
-    border: 1px solid rgb(255, 234, 0);
+.search-field3 , .search-field2{
+    width: 30%;
+    border:0.5px white solid;
+    margin: 1rem;
+}
+.search-field2{
+    border-style: none;
+}
+.inner_Scontainer{
+    text-align: center;
 }
