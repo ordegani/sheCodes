@@ -49,7 +49,6 @@ const SearchForFilm = (props) => {
     getMovie();
   }, [query]);
 
-
   return (
     <div className="Scontainer">
       <div className="inner_Scontainer">
