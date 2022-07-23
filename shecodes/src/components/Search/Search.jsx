@@ -23,7 +23,6 @@ const SearchForFilm = (props) => {
   const updatetypeSearch = (t) => {
     settypeSearch(t.target.value);
   };
-
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
@@ -33,7 +32,7 @@ const SearchForFilm = (props) => {
     setyearSearch("");
     settypeSearch("");
   };
-  /////////////////////////////////
+
   const getMovie = async () => {
     const apikey = `b8dd69ac`;
     const response = await fetch(
@@ -45,11 +44,12 @@ const SearchForFilm = (props) => {
   };
   console.log(movie);
   console.log(props.favorites);
-  ////////////////////////////////
+
   useEffect(() => {
     getMovie();
   }, [query]);
-  ///////////////////////////////////////////////////////////////////
+
+
   return (
     <div className="Scontainer">
       <div className="inner_Scontainer">
@@ -84,18 +84,6 @@ const SearchForFilm = (props) => {
           <div>
           </div>
         </form>
-///////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
         <div className={query === "" ? "initial_SmovieContainer" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}
@@ -104,18 +92,12 @@ const SearchForFilm = (props) => {
             onFavoriteClick={() => props.saveMovie(movie)}
             text="❤"
           ></Movie>
-          {/* <button
-        className="save_movie"
-        onClick={() => props.saveMovie(props.movies)}
-        type="Submit"
-      >
-     SAVE
-      </button> */}
         </div>
       </div>
     </div>
   );
 };
+
 const mapStateToProps = (state) => {
   return {
     movies: state.movies,
@@ -129,7 +111,6 @@ const mapDispatchToProps = (dispatch, favorites) => {
       dispatch({ type: "MOVIE_SAVED_TO_FAVORITES", payload: movie })
     },
     setToState: (movie) => {
-
       dispatch({
         type: "FETCHED_DATA",
         payload: movie,
