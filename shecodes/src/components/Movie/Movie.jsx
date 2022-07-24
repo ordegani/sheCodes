@@ -12,24 +12,24 @@ const Movie = ({
   onFavoriteClick }) => {
   return (
     <div>
-      
-    <div className={movie_title?"movie_item":"none"}>
-      <div className="movie_title">
-        {movie_title ? movie_title : movie_name}
+
+      <div className={movie_title ? "movie_item" : "none"}>
+        <div className="movie_title">
+          {movie_title ? movie_title : movie_name}
+        </div>
+        <img src={movie_posterPath ? movie_posterPath : null} width="300" height="300"></img>
+        <div className="movie_releaseDate"> {movie_releaseDate}</div>
+        <div className="movie_rating">{movie_voteAverage}</div>
+        <button
+          className="save_movie"
+          onClick={() => onFavoriteClick()}
+          type="Submit"
+        >
+          {text}
+        </button>
+        <p className="movie_overview">{movie_overview}</p>
       </div>
-      <img src={movie_posterPath? movie_posterPath:null} width="300" height="300"></img>
-      <div className="movie_releaseDate"> {movie_releaseDate}</div>
-      <div className="movie_rating">{movie_voteAverage}</div>
-      <button
-        className="save_movie"
-        onClick={() => onFavoriteClick()}
-        type="Submit"
-      >
-        {text}
-      </button>
-      <p className="movie_overview">{movie_overview}</p>
-    </div>
-    <img className={movie_title?"none": "img"} src="https://i.imgflip.com/1wfq9j.jpg"/>
+      <img className={movie_title ? "none" : "img"} src="https://i.imgflip.com/1wfq9j.jpg" />
     </div>
   );
 };
