@@ -13,7 +13,7 @@ const FavoritesList = (props) => {
         return props.favorites.map((movie, index) => {
             return (
                 <Movie
-                    // key={index}
+                    key={index}
                     movie_title={movie.title?movie.title: movie.Title}
                     movie_name={movie.name}
                     movie_posterPath={movie.poster_path? "https://image.tmdb.org/t/p/original" + movie.poster_path:movie.Poster}

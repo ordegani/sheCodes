@@ -64,7 +64,7 @@ const SearchForFilm = (props) => {
             ▶
           </button>
           <br />
-          <h7 style={{ color: "rgb(77, 2, 77)" }}>Advanced search: </h7>
+          <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search: </h7>
 
           <input
             className="search-field2"
@@ -83,13 +83,13 @@ const SearchForFilm = (props) => {
           <div>
           </div>
         </form>
-        <div className={query === "" ? "initial_SmovieContainer" : "SmovieContainer"}>
-          <Movie
+        <div className={query === "" ? "none" : "SmovieContainer"}>
+          <Movie 
             // key={movie.imdbID}
             movie_title={movie.Title}
             movie_posterPath={movie.Poster}
             onFavoriteClick={() => props.saveMovie(movie)}
-            text="❤"
+            text={movie.Title?"❤":null}
           ></Movie>
         </div>
       </div>

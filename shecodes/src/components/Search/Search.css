@@ -9,7 +9,7 @@
     width: 75vw;
 }
 .SmovieContainer{
-    border: 1px solid rgb(255, 234, 0);
+    /* border: 1px solid rgb(255, 234, 0); */
    display: flex;
    justify-content: center;
 }
@@ -23,4 +23,7 @@
 }
 .inner_Scontainer{
     text-align: center;
+}
+.none{
+    display: none;
 }
