@@ -5,13 +5,14 @@ import "../Movie/Movie.css";
 import "./Search.css";
 
 const SearchForFilm = (props) => {
+  //speechRecognition
   const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
   if (speechRecognition) {
     console.log("speech on");
   } else {
     console.log("speec off");
   }
-
+  //
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
