@@ -5,11 +5,12 @@ import "../Movie/Movie.css";
 import "./Search.css";
 
 const SearchForFilm = (props) => {
-  const speechRecognition=window.speechRecognition||window.webkitSpeechRecognition;
-if (speechRecognition){
-  console.log("speech on");
-}else{
-console.log("speec off");}
+  const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
+  if (speechRecognition) {
+    console.log("speech on");
+  } else {
+    console.log("speec off");
+  }
 
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
@@ -47,7 +48,7 @@ console.log("speec off");}
     const data = await response.json();
     setMovie(data);
     props.setToState(movie.Title);
-   
+
   };
   console.log(movie.Error);
   console.log(props.favorites);
@@ -91,12 +92,12 @@ console.log("speec off");}
           </div>
         </form>
         <div className={query === "" ? "none" : "SmovieContainer"}>
-          <Movie 
+          <Movie
             // key={movie.imdbID}
             movie_title={movie.Title}
             movie_posterPath={movie.Poster}
             onFavoriteClick={() => props.saveMovie(movie)}
-            text={movie.Title?"❤":null}
+            text={movie.Title ? "❤" : null}
           ></Movie>
           {/* <div style={{ color: "rgb(136, 9, 136)" }} className={movie.Title?"none":"error_alert"}>{movie.Error}</div> */}
         </div>
