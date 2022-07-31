@@ -29,7 +29,8 @@ const Movie = ({
         </button>
         <p className="movie_overview">{movie_overview}</p>
       </div>
-      <img className={movie_title ? "none" : "img"} src="https://i.imgflip.com/1wfq9j.jpg" />
+      {/* <p style={{ color: "rgb(136, 9, 136)" }}>{movie_Error?movie_Error:null}</p> */}
+      {/* <img className={movie_Error ? "img":"none"} src="https://i.imgflip.com/1wfq9j.jpg" /> */}
     </div>
   );
 };

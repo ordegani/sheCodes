@@ -5,6 +5,12 @@ import "../Movie/Movie.css";
 import "./Search.css";
 
 const SearchForFilm = (props) => {
+  const speechRecognition=window.speechRecognition||window.webkitSpeechRecognition;
+if (speechRecognition){
+  console.log("speech on");
+}else{
+console.log("speec off");}
+
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -41,8 +47,9 @@ const SearchForFilm = (props) => {
     const data = await response.json();
     setMovie(data);
     props.setToState(movie.Title);
+   
   };
-  console.log(movie);
+  console.log(movie.Error);
   console.log(props.favorites);
 
   useEffect(() => {
@@ -91,6 +98,7 @@ const SearchForFilm = (props) => {
             onFavoriteClick={() => props.saveMovie(movie)}
             text={movie.Title?"❤":null}
           ></Movie>
+          {/* <div style={{ color: "rgb(136, 9, 136)" }} className={movie.Title?"none":"error_alert"}>{movie.Error}</div> */}
         </div>
       </div>
     </div>
