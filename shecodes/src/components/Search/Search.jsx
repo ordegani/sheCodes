@@ -48,9 +48,8 @@ const SearchForFilm = (props) => {
     const data = await response.json();
     setMovie(data);
     props.setToState(movie.Title);
-
+    console.log(movie.Error);
   };
-  console.log(movie.Error);
   console.log(props.favorites);
 
   useEffect(() => {
