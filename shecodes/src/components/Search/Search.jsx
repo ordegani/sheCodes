@@ -68,6 +68,7 @@ const SearchForFilm = (props) => {
             value={search}
             onChange={updateSearch}
           />
+          <button>&#127897;</button>
           <button className="search-button" type="Submit">
             ▶
           </button>
