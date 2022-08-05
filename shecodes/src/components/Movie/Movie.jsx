@@ -12,7 +12,6 @@ const Movie = ({
   onFavoriteClick }) => {
   return (
     <div>
-
       <div className={movie_title ? "movie_item" : "none"}>
         <div className="movie_title">
           {movie_title ? movie_title : movie_name}
