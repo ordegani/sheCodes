@@ -8,6 +8,9 @@
     border: 1px solid rgb(255, 234, 0);
     width: 75vw;
 }
+.search-field{
+    width: 30%;
+}
 .SmovieContainer{
     /* border: 1px solid rgb(255, 234, 0); */
    display: flex;

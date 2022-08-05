@@ -61,14 +61,14 @@ const SearchForFilm = (props) => {
     <div className="Scontainer">
       <div className="inner_Scontainer">
         <form onSubmit={getSearch} className="search-form">
-          <input
+          <input 
             className="search-field"
             placeholder="choose film"
             type="text"
             value={search}
             onChange={updateSearch}
           />
-          <button>&#127897;</button>
+          <button style={{ border: "yellow 2px solid" }}><img width="50%" height="50%" src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"/></button>
           <button className="search-button" type="Submit">
             ▶
           </button>
