@@ -9,5 +9,7 @@ Use of Redux in the project:
 
 Links:
 https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/
+
 https://www.omdbapi.com
+
 https://www.themoviedb.org
