@@ -3,6 +3,7 @@
 sheCodes is a project created using React, HTML and CSS as FrontEnd technologies, and NodeJS, MongoDB as the BackEnd technologies.
 
 Additinal thechnologies/web services: 
+
 Redux, web speech API, tmdb API, omdb API.
 
 Features:
