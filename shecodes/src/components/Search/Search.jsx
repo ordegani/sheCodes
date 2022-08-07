@@ -13,8 +13,8 @@ const SearchForFilm = (props) => {
   } else {
     console.log("speec off");
   }
-  const speechMode = ()=>{
-    
+  const speechMode = () => {
+
   }
   //
   const [movie, setMovie] = useState([]);
@@ -73,9 +73,9 @@ const SearchForFilm = (props) => {
             onChange={updateSearch}
           />
           <button style={{ border: "yellow 2px solid" }}>
-          <img width="50%" height="50%" 
-          src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24" 
-          value={speechMode}/>
+            <img width="50%" height="50%"
+              src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+              value={speechMode} />
           </button>
           <button className="search-button" type="Submit">
             ▶
