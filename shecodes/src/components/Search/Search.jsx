@@ -14,7 +14,7 @@ const SearchForFilm = (props) => {
     console.log("speech off");
   }
   const speechMode = () => {
-    recognition.start();
+    // recognition.start();
   }
   //
   const [movie, setMovie] = useState([]);
