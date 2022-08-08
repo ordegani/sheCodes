@@ -6,15 +6,15 @@ import "./Search.css";
 
 const SearchForFilm = (props) => {
   //speechRecognition
-  const recognition = new speechRecognition();
   const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
+  const recognition = new speechRecognition();
   if (speechRecognition) {
     console.log("speech on");
   } else {
-    console.log("speec off");
+    console.log("speech off");
   }
   const speechMode = () => {
-
+    recognition.start();
   }
   //
   const [movie, setMovie] = useState([]);
