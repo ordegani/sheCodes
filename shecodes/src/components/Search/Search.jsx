@@ -87,26 +87,24 @@ const SearchForFilm = (props) => {
               ▶
           </button>
           </div>
+          
           <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
-
           <input
             className="search-field2"
             placeholder="2022"
             type="text"
             onChange={updateYearSearch}
             value={yearSearch}
-
           />
-
           <select className="search-field3" style={{ color: "grey" }} onChange={updatetypeSearch}>
             <option value="movie">movie</option>
             <option value="series">series</option>
             <option value="episode">episode</option>
           </select>
-
           <div>
           </div>
         </form>
+
         <div style={{ color: "red" }}>{movie.Error ? <img src="https://i.imgflip.com/1wfq9j.jpg" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
