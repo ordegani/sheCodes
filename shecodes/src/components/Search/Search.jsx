@@ -70,25 +70,25 @@ const SearchForFilm = (props) => {
     <div className="Scontainer">
       <div className="inner_Scontainer">
         <form onSubmit={getSearch} className="search-form">
-        <div style={{border:"2px solid yellow"}} >
-          <input
-            className="search-field"
-            placeholder="choose film"
-            type="text"
-            value={search}
-            onChange={updateSearch}
-          />
-          <button onClick={speechMode}
-            >
-            <img width="50%" height="50%"
-              src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+          <div style={{ border: "2px solid yellow" }} >
+            <input
+              className="search-field"
+              placeholder="choose film"
+              type="text"
+              value={search}
+              onChange={updateSearch}
             />
+            <button onClick={speechMode}
+            >
+              <img width="50%" height="50%"
+                src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+              />
 
+            </button>
+            <button className="search-button" type="Submit">
+              ▶
           </button>
-          <button className="search-button" type="Submit">
-            ▶
-          </button>
-         </div>
+          </div>
           <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
 
           <input
@@ -105,11 +105,11 @@ const SearchForFilm = (props) => {
             <option value="series">series</option>
             <option value="episode">episode</option>
           </select>
-   
+
           <div>
           </div>
         </form>
-        <div style={{color:"red"}}>{movie.Error?<img src="https://i.imgflip.com/1wfq9j.jpg"/>:null}</div>
+        <div style={{ color: "red" }}>{movie.Error ? <img src="https://i.imgflip.com/1wfq9j.jpg" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}
