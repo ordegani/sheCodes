@@ -8,20 +8,20 @@ const SearchForFilm = (props) => {
   // speechRecognition
   const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
   const recognition = new speechRecognition();
-recognition.onstart=()=>{
-console.log("speech recognition is on now");
-}
-recognition.onresult=(event)=>{
-  const index = event.resultIndex;
-  const text = event.results[index][0].transcript;
-  console.log(text);
-  setSearch(text);
-
-}
-  const speechMode = () => {
-  recognition.start();
+  recognition.onstart = () => {
+    console.log("speech recognition is on now");
   }
-  
+  recognition.onresult = (event) => {
+    const index = event.resultIndex;
+    const text = event.results[index][0].transcript;
+    console.log(text);
+    setSearch(text);
+
+  }
+  const speechMode = () => {
+    recognition.start();
+  }
+
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -78,11 +78,11 @@ recognition.onresult=(event)=>{
             onChange={updateSearch}
           />
           <button onClick={speechMode}
-          style={{ border: "yellow 2px solid" }}>
+            style={{ border: "yellow 2px solid" }}>
             <img width="50%" height="50%"
               src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
-               />
-               
+            />
+
           </button>
           <button className="search-button" type="Submit">
             ▶
