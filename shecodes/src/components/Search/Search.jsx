@@ -55,10 +55,10 @@ const SearchForFilm = (props) => {
     const response = await fetch(
       `http://www.omdbapi.com/?t=${query}&y=${yearQuery ? yearQuery : "2022"}&type=${typeQuery}&apikey=${apikey}`
     );
+    console.log(movie.Error);
     const data = await response.json();
     setMovie(data);
     props.setToState(movie.Title);
-    console.log(movie.Error);
   };
   console.log(props.favorites);
 
@@ -70,6 +70,7 @@ const SearchForFilm = (props) => {
     <div className="Scontainer">
       <div className="inner_Scontainer">
         <form onSubmit={getSearch} className="search-form">
+        <div style={{border:"2px solid yellow"}} >
           <input
             className="search-field"
             placeholder="choose film"
@@ -78,7 +79,7 @@ const SearchForFilm = (props) => {
             onChange={updateSearch}
           />
           <button onClick={speechMode}
-            style={{ border: "yellow 2px solid" }}>
+            >
             <img width="50%" height="50%"
               src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
             />
@@ -87,7 +88,7 @@ const SearchForFilm = (props) => {
           <button className="search-button" type="Submit">
             ▶
           </button>
-          <br />
+         </div>
           <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
 
           <input
@@ -104,9 +105,11 @@ const SearchForFilm = (props) => {
             <option value="series">series</option>
             <option value="episode">episode</option>
           </select>
+   
           <div>
           </div>
         </form>
+        <div style={{color:"red"}}>{movie.Error?<img src="https://i.imgflip.com/1wfq9j.jpg"/>:null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}

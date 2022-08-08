@@ -14,8 +14,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/blogs' exact element={<BlogsList />} />
-        <Route path='/' exact element={<MoviesList />} />
-        <Route path='/search' exact element={<SearchForFilm />} />
+        <Route path='/' exact element={<SearchForFilm />} />
+        <Route path='/top_rated' exact element={<MoviesList />} />
         <Route path='/favorites' exact element={<FavoriteList />} />
         <Route path='/create_blog' exact element={<CreateBlog />} />
       </Routes>
