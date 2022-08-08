@@ -6,13 +6,13 @@ import "./Search.css";
 
 const SearchForFilm = (props) => {
   //speechRecognition
-  const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
-  const recognition = new speechRecognition();
-  if (speechRecognition) {
-    console.log("speech on");
-  } else {
-    console.log("speech off");
-  }
+  // const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
+  // const recognition = new speechRecognition();
+  // if (speechRecognition) {
+  //   console.log("speech on");
+  // } else {
+  //   console.log("speech off");
+  // }
   // const speechMode = () => {
     // recognition.start();
   // }
@@ -72,11 +72,11 @@ const SearchForFilm = (props) => {
             value={search}
             onChange={updateSearch}
           />
-          <button style={{ border: "yellow 2px solid" }}>
+          {/* <button style={{ border: "yellow 2px solid" }}>
             <img width="50%" height="50%"
               src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
               value={speechMode} />
-          </button>
+          </button> */}
           <button className="search-button" type="Submit">
             ▶
           </button>
