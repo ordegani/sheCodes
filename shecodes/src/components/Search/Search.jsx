@@ -78,12 +78,10 @@ const SearchForFilm = (props) => {
               value={search}
               onChange={updateSearch}
             />
-            <button onClick={speechMode}
-            >
+            <button onClick={speechMode}>
               <img width="50%" height="50%"
                 src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
               />
-
             </button>
             <button className="search-button" type="Submit">
               ▶
