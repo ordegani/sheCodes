@@ -87,7 +87,7 @@ const SearchForFilm = (props) => {
               ▶
           </button>
           </div>
-          
+
           <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
           <input
             className="search-field2"
@@ -105,7 +105,7 @@ const SearchForFilm = (props) => {
           </div>
         </form>
 
-        <div style={{ color: "red" }}>{movie.Error ? <img src="https://i.imgflip.com/1wfq9j.jpg" /> : null}</div>
+        <div style={{ color: "red" }}>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}
