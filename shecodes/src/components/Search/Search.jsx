@@ -16,7 +16,7 @@ const SearchForFilm = (props) => {
     console.log("speech recognition is on now");
     setI(1);
   }
-  recognition.onend = () =>{
+  recognition.onend = () => {
     setI(0);
     console.log(i);
   }
@@ -25,7 +25,7 @@ const SearchForFilm = (props) => {
     const text = event.results[index][0].transcript;
     console.log(text);
     setSearch(text);
-    if (!event){
+    if (!event) {
       speechReply();
     }
   }
@@ -33,13 +33,13 @@ const SearchForFilm = (props) => {
     recognition.start();
   }
   console.log(i);
-  const speechReply=()=>{
-    const speech=new SpeechSynthesisUtterance();
-    speech.text="I did not catch that, try again please";
+  const speechReply = () => {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = "I did not catch that, try again please";
     window.speechSynthesis.speak(speech);
   }
 
-//
+  //
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -119,12 +119,12 @@ const SearchForFilm = (props) => {
           </div>
         </form>
         <button onClick={speechMode}>
-              <img width="20rem" height="20rem"
-                src={!i?"https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
-                :"https://cdn.vectorstock.com/i/1000x1000/93/41/recording-sign-icon-red-logo-camera-video-vector-28489341.webp"}
-              />
-            </button>
-        <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px"/> : null}</div>
+          <img width="20rem" height="20rem"
+            src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+              : "https://cdn.vectorstock.com/i/1000x1000/93/41/recording-sign-icon-red-logo-camera-video-vector-28489341.webp"}
+          />
+        </button>
+        <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}
