@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import { useSyncExternalStore } from "react";
-// import { useDispatch } from "react-redux";
+import { useSyncExternalStore } from "react";
+import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movie/Movie.css";
@@ -23,7 +23,6 @@ const SearchForFilm = (props) => {
   recognition.onresult = (event) => {
     const index = event.resultIndex;
     const text = event.results[index][0].transcript;
-    console.log(text);
     setSearch(text);
     if (!event) {
       speechReply();
@@ -133,7 +132,6 @@ const SearchForFilm = (props) => {
             onFavoriteClick={() => props.saveMovie(movie)}
             text={movie.Title ? "❤" : null}
           ></Movie>
-          {/* <div style={{ color: "rgb(136, 9, 136)" }} className={movie.Title?"none":"error_alert"}>{movie.Error}</div> */}
         </div>
       </div>
     </div>
