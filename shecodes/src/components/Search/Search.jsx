@@ -112,12 +112,14 @@ const SearchForFilm = (props) => {
           <div>
           </div>
         </form>
+
         <button onClick={speechMode}>
           <img width="20rem" height="20rem"
             src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
               : "https://cdn.vectorstock.com/i/1000x1000/93/41/recording-sign-icon-red-logo-camera-video-vector-28489341.webp"}
           />
         </button>
+
         <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
@@ -139,7 +141,6 @@ const mapStateToProps = (state) => {
     favorites: state.favorites,
   };
 };
-
 const mapDispatchToProps = (dispatch, favorites) => {
   return {
     saveMovie: (movie) => {
