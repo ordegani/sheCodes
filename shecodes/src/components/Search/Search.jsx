@@ -31,7 +31,6 @@ const SearchForFilm = (props) => {
   const speechMode = () => {
     recognition.start();
   }
-  console.log(i);
   const speechReply = () => {
     const speech = new SpeechSynthesisUtterance();
     speech.text = "I did not catch that, try again please";
