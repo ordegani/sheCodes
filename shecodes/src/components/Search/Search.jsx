@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+// import { useSyncExternalStore } from "react";
+// import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movie/Movie.css";
@@ -8,20 +10,36 @@ const SearchForFilm = (props) => {
   // speechRecognition
   const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
   const recognition = new speechRecognition();
+  const [i, setI] = useState(0);
+
   recognition.onstart = () => {
     console.log("speech recognition is on now");
+    setI(1);
+  }
+  recognition.onend = () =>{
+    setI(0);
+    console.log(i);
   }
   recognition.onresult = (event) => {
     const index = event.resultIndex;
     const text = event.results[index][0].transcript;
     console.log(text);
     setSearch(text);
-
+    if (!event){
+      speechReply();
+    }
   }
   const speechMode = () => {
     recognition.start();
   }
+  console.log(i);
+  const speechReply=()=>{
+    const speech=new SpeechSynthesisUtterance();
+    speech.text="I did not catch that, try again please";
+    window.speechSynthesis.speak(speech);
+  }
 
+//
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
@@ -70,7 +88,7 @@ const SearchForFilm = (props) => {
     <div className="Scontainer">
       <div className="inner_Scontainer">
         <form onSubmit={getSearch} className="search-form">
-          <div style={{ border: "2px solid yellow" }} >
+          <div>
             <input
               className="search-field"
               placeholder="choose film"
@@ -78,11 +96,7 @@ const SearchForFilm = (props) => {
               value={search}
               onChange={updateSearch}
             />
-            <button onClick={speechMode}>
-              <img width="50%" height="50%"
-                src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
-              />
-            </button>
+
             <button className="search-button" type="Submit">
               ▶
           </button>
@@ -104,8 +118,13 @@ const SearchForFilm = (props) => {
           <div>
           </div>
         </form>
-
-        <div style={{ color: "red" }}>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" /> : null}</div>
+        <button onClick={speechMode}>
+              <img width="20rem" height="20rem"
+                src={!i?"https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+                :"https://cdn.vectorstock.com/i/1000x1000/93/41/recording-sign-icon-red-logo-camera-video-vector-28489341.webp"}
+              />
+            </button>
+        <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px"/> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             // key={movie.imdbID}
