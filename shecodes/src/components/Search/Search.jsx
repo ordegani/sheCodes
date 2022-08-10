@@ -36,7 +36,6 @@ const SearchForFilm = (props) => {
     speech.text = "I did not catch that, try again please";
     window.speechSynthesis.speak(speech);
   }
-
   //
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState("");
@@ -76,8 +75,6 @@ const SearchForFilm = (props) => {
     setMovie(data);
     props.setToState(movie.Title);
   };
-  console.log(props.favorites);
-
   useEffect(() => {
     getMovie();
   }, [query]);
