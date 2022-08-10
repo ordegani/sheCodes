@@ -16,7 +16,7 @@ const SearchForFilm = (props) => {
     console.log("speech recognition is on now");
     setI(1);
   }
-  recognition.onend = () => {
+  recognition.onend = (event) => {
     setI(0);
     console.log(i);
   }
@@ -24,16 +24,16 @@ const SearchForFilm = (props) => {
     const index = event.resultIndex;
     const text = event.results[index][0].transcript;
     setSearch(text);
-    if (!event) {
-      speechReply();
+    if (text) {
+      speechReply(text);
     }
   }
   const speechMode = () => {
     recognition.start();
   }
-  const speechReply = () => {
+  const speechReply = (message) => {
     const speech = new SpeechSynthesisUtterance();
-    speech.text = "I did not catch that, try again please";
+    speech.text = message;
     window.speechSynthesis.speak(speech);
   }
   //
@@ -82,44 +82,45 @@ const SearchForFilm = (props) => {
   return (
     <div className="Scontainer">
       <div className="inner_Scontainer">
-        <form onSubmit={getSearch} className="search-form">
-          <div>
-            <input
-              className="search-field"
-              placeholder="choose film"
-              type="text"
-              value={search}
-              onChange={updateSearch}
-            />
-            <button className="search-button" type="Submit">
-              ▶
+        <div className="top_Section">
+          <form onSubmit={getSearch} className="search-form">
+            <div>
+              <input
+                className="search-field"
+                placeholder="choose film"
+                type="text"
+                value={search}
+                onChange={updateSearch}
+              />
+              <button className="search-button" type="Submit">
+                ▶
           </button>
-          </div>
+            </div>
 
-          <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
-          <input
-            className="search-field2"
-            placeholder="2022"
-            type="text"
-            onChange={updateYearSearch}
-            value={yearSearch}
-          />
-          <select className="search-field3" style={{ color: "grey" }} onChange={updatetypeSearch}>
-            <option value="movie">movie</option>
-            <option value="series">series</option>
-            <option value="episode">episode</option>
-          </select>
-          <div>
-          </div>
-        </form>
+            <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
+            <input
+              className="search-field2"
+              placeholder="2022"
+              type="text"
+              onChange={updateYearSearch}
+              value={yearSearch}
+            />
+            <select className="search-field3" style={{ color: "grey" }} onChange={updatetypeSearch}>
+              <option value="movie">movie</option>
+              <option value="series">series</option>
+              <option value="episode">episode</option>
+            </select>
+            <div>
+            </div>
+          </form>
 
-        <button onClick={speechMode}>
-          <img width="20rem" height="20rem"
-            src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
-              : "https://cdn.vectorstock.com/i/1000x1000/93/41/recording-sign-icon-red-logo-camera-video-vector-28489341.webp"}
-          />
-        </button>
-
+          <button className="recognition_Button" onClick={speechMode}>
+            <img width="30rem" height="30rem"
+              src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+                : "https://thumbs.dreamstime.com/b/recording-symbol-isolated-white-background-record-icon-189850773.jpg"}
+            />
+          </button>
+        </div>
         <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
