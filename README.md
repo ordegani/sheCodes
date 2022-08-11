@@ -1,14 +1,14 @@
 💻sheCodes💻
 
-sheCodes is a project created using React, HTML and CSS as FrontEnd technologies, and NodeJS, MongoDB as the BackEnd technologies.
+* sheCodes is a project created using React, HTML and CSS as FrontEnd technologies, and NodeJS, MongoDB as the BackEnd technologies.
 
-Additinal thechnologies/web services: 
+* Additinal thechnologies/web services: 
 
 Redux, web speech API, tmdb API, omdb API.
 
-Features:
+* Features:
 
-Use of Redux in the project:
+* Use of Redux in the project:
 
 store: movies reducer [ ], favorites reducer [ ] -->
 React components: MoviesList, FavoritesList --Invokes an action creator-->
