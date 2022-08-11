@@ -12,22 +12,20 @@ const FavoritesList = (props) => {
         console.log(props.movies);
         return props.favorites.map((movie, index) => {
             return (
-                <Movie 
+                <Movie
                     key={index}
-                    movie_title={movie.title?movie.title: movie.Title}
+                    movie_title={movie.title ? movie.title : movie.Title}
                     movie_name={movie.name}
-                    movie_posterPath={movie.poster_path? "https://image.tmdb.org/t/p/original" + movie.poster_path:movie.Poster}
+                    movie_posterPath={movie.poster_path ? "https://image.tmdb.org/t/p/original" + movie.poster_path : movie.Poster}
                     movie_voteAverage={movie.vote_average}
                     movie_releaseDate={movie.release_date}
                     onFavoriteClick={() => props.deleted(movie)}
-                    movie_overview={movie.overview? movie.overview:movie.Plot}
+                    movie_overview={movie.overview ? movie.overview : movie.Plot}
                     text="remove"
                 ></Movie>);
-
         });
     }
     return (<div className="movies_listContainer">{Flist()}</div>);
-
 };
 
 const mapStateToProps = (state) => {
@@ -36,7 +34,6 @@ const mapStateToProps = (state) => {
         movies: state.movies
     };
 }
-
 const mapDispatchToProps = (dispatch) => {
     return {
         deleted: (movie) => {
