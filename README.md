@@ -9,7 +9,12 @@ Redux, web speech API, tmdb API, omdb API.
 Features:
 
 Use of Redux in the project:
-<img width="1038" alt="Screen Shot 2022-08-11 at 13 33 05" src="https://user-images.githubusercontent.com/77922002/184115177-e9e7bf6f-bfa2-42a5-8c77-2779f2797947.png">
+store: movies reducer [ ], favorites reducer [ ] --> React components: MoviesList, FavoritesList --Invokes an action creator--> Action creators: fetchData(),saveMovie(), deleted() --Returns an action--> Actions: FETCHED_DATA, MOVIE_SAVED_TO_FAVORITES, MOVIE_DELETED --Action is dispatched and gets forwarded to reducer--> store
+
+
+
+
+
 
 👩🏻‍🎓Links:
 https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/
