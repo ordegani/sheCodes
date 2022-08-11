@@ -21,7 +21,7 @@ store
 
 
 
-👩🏻‍🎓Links:
+* 👩🏻‍🎓Links:
 
 https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/
 
