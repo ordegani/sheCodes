@@ -14,6 +14,11 @@ Links:
 
 https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api/
 
+https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
+https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
+
+
+
 https://www.omdbapi.com
 
 https://www.themoviedb.org
