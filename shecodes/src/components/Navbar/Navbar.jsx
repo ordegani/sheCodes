@@ -10,7 +10,7 @@ const Navbar = () => {
                     <Link className='link' to="/top_rated">Top Rated</Link>
                 </li>
                 <li>
-                <img height="50%" src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"/>
+                    <img height="50%" src="https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24" />
                     <Link className='link' to="/">Search
                     </Link>
                 </li>
