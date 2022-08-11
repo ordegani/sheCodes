@@ -6,6 +6,8 @@
 
 * Features:
 
+CRUD app with a search form component that contains 1 required parameter and two optional parameters, and a component with a structured query's results. User can create, read, update, and on a third component he/her may delete/delete the entire list. Blogs creating -  
+
 * Use of Redux in the project:
 
 Store: movies reducer [ ], favorites reducer [ ] -->
