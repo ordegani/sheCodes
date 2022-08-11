@@ -12,7 +12,7 @@ const FavoritesList = (props) => {
         console.log(props.movies);
         return props.favorites.map((movie, index) => {
             return (
-                <Movie
+                <Movie 
                     key={index}
                     movie_title={movie.title?movie.title: movie.Title}
                     movie_name={movie.name}
@@ -20,6 +20,7 @@ const FavoritesList = (props) => {
                     movie_voteAverage={movie.vote_average}
                     movie_releaseDate={movie.release_date}
                     onFavoriteClick={() => props.deleted(movie)}
+                    movie_overview={movie.overview? movie.overview:movie.Plot}
                     text="remove"
                 ></Movie>);
 

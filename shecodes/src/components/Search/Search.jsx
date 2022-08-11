@@ -72,6 +72,7 @@ const SearchForFilm = (props) => {
     );
     console.log(movie.Error);
     const data = await response.json();
+    console.log(data);
     setMovie(data);
     props.setToState(movie.Title);
   };
@@ -129,6 +130,7 @@ const SearchForFilm = (props) => {
             movie_posterPath={movie.Poster}
             onFavoriteClick={() => props.saveMovie(movie)}
             text={movie.Title ? "❤" : null}
+            movie_overview={movie.Plot}
           ></Movie>
         </div>
       </div>

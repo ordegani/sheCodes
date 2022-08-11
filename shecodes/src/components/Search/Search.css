@@ -15,6 +15,7 @@
     /* border: 1px solid rgb(255, 234, 0); */
    display: flex;
    justify-content: center;
+   color: white;
 }
 .search-field3 , .search-field2{
     width: 30%;
