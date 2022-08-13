@@ -3,19 +3,19 @@ import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-
-const app = express();
 // import path from 'path';
 // const { request } = require('http');
 
-
 // const publicDirectory = path.join(__dirname, 'client/build')
 // app.use(express.static(publicDirectory))
+const app = express();
 app.use(cors())
 app.use(express.json())
 const port = 5000;
+
 //config
 const connection_url = process.env.connection_url;
+
 // API endpoints
 app.post('/blogs', (req, res) => {
   const DBblog = req.body;
@@ -38,6 +38,7 @@ app.get('/blogs', (req, res) => {
     }
   })
 })
+
 //DB config
 mongoose.connect(connection_url, {
   useNewUrlParser: true,
