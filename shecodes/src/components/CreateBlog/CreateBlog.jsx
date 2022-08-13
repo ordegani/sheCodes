@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import axios from "axios";
 import "./CreateBlog.css";
-
 //add fs
 
 const CreateBlog = () => {
@@ -10,9 +9,8 @@ const CreateBlog = () => {
     const onBlogClick =
         async () => {
             await axios.post('http://localhost:5000/blogs', { name: name, blog: value });
-            
         }
-        
+
     return (
         <div className="new_blogContainer">
             <form className="form">
