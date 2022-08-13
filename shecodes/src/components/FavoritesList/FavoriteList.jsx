@@ -12,7 +12,7 @@ const FavoritesList = (props) => {
         //1.return(
         //     <button onClick={removeAllFavorites}>remove all</button>
         // )
-        //2. add movie release date+movie rating
+        
         
         console.log(props.favorites);
         console.log(props.movies);
