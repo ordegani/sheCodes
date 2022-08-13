@@ -70,9 +70,7 @@ const SearchForFilm = (props) => {
     const response = await fetch(
       `http://www.omdbapi.com/?t=${query}&y=${yearQuery ? yearQuery : "2022"}&type=${typeQuery}&apikey=${apikey}`
     );
-    // console.log(movie.Error);
     const data = await response.json();
-    // console.log(data);
     setMovie(data);
     props.setToState(movie.Title);
   };
