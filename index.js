@@ -1,5 +1,5 @@
 import blogs from "./schemas/blog.js";
-// import { } from 'dotenv/config';
+import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -38,12 +38,12 @@ app.get('/blogs', (req, res) => {
     }
   })
 })
-// DB config
-// mongoose.connect(connection_url, {
-//   useNewUrlParser: true,
-//   useCreateIndex: true,
-//   useUnifiedTopology: true,
-// });
-//listener
+//DB config
+mongoose.connect(connection_url, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
+
 app.listen(port, () => console.log("connected to port #: " + port));
 

@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import "./CreateBlog.css";
+
 //add fs
 
 const CreateBlog = () => {
@@ -8,17 +9,18 @@ const CreateBlog = () => {
     const [name, setName] = useState('')
     const onBlogClick =
         async () => {
-            await axios.post('http://localhost:5000/blogs', { name: name, blog: value })
-            console.log(value);
+            await axios.post('http://localhost:5000/blogs', { name: name, blog: value });
+            
         }
+        
     return (
         <div className="new_blogContainer">
             <form className="form">
                 <label>
                     WRITE ▶</label>
                 <input className="newName" type="text" required placeholder="your blog title here" onChange={(e) => setName(e.target.value)} />
-                <input className="newBlog" type="text" required placeholder="Get creative here" onChange={(e) => setValue(e.target.value)} />
-                <button onClick={onBlogClick}> POST 🎬  </button>
+                <input className="newBlog" type="text" required placeholder="Get creative here" onChange={(el) => setValue(el.target.value)} />
+                <button type="submit" onClick={onBlogClick}> POST 🎬  </button>
             </form>
         </div>
     )
