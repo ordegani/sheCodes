@@ -24,6 +24,6 @@ const BlogsList = () => {
           </div>)
       }))
   }
-  return (<div className="blogs_listContainer">{Blist()}</div>);
+  return (<div className="blogs_listContainer"><div className="inner_blogs_listContainer">{Blist()}</div></div>);
 }
 export default BlogsList;

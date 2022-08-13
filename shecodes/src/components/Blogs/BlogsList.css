@@ -1,18 +1,25 @@
 .blogs_listContainer{
     display: flex;
-    flex-wrap: wrap;
-    align-content:center;
     justify-content: center;
-    align-items: flex-start;
+}
+.inner_blogs_listContainer{
+    display: flex;
+    gap: 2rem;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 2vh;
-    color: aliceblue;
-    background-color: aqua;
+    color: white;
+    max-width: 90%;
 }
 .blog{
-    color: white;
-    min-width: 45%;
+    min-width: 40%;
+    max-width: 40%;
     text-align: center;
+    border: grey 2px double;
+    padding: 2rem;
 }
 .blog>:nth-child(1){
-    font-size: small;
+    text-decoration-line: underline;
+    font-size: 125%;
 }
