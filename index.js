@@ -19,7 +19,6 @@ const connection_url = process.env.connection_url;
 // API endpoints
 app.post('/blogs', (req, res) => {
   const DBblog = req.body;
-
   blogs.create(DBblog, (err, data) => {
     if (err) {
       res.status(500).send(err)
