@@ -12,8 +12,6 @@ const FavoritesList = (props) => {
         //1.return(
         //     <button onClick={removeAllFavorites}>remove all</button>
         // )
-        
-        
         console.log(props.favorites);
         console.log(props.movies);
         return props.favorites.map((movie, index) => {
