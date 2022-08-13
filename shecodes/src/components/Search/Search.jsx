@@ -70,9 +70,9 @@ const SearchForFilm = (props) => {
     const response = await fetch(
       `http://www.omdbapi.com/?t=${query}&y=${yearQuery ? yearQuery : "2022"}&type=${typeQuery}&apikey=${apikey}`
     );
-    console.log(movie.Error);
+    // console.log(movie.Error);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setMovie(data);
     props.setToState(movie.Title);
   };
@@ -98,7 +98,7 @@ const SearchForFilm = (props) => {
           </button>
             </div>
 
-            <h7 style={{ color: "rgb(136, 9, 136)" }}>Advanced search:</h7>
+            <h6 style={{ color: " rgb(255, 234, 0)" }}>Advanced search:</h6>
             <input
               className="search-field2"
               placeholder="2022"
@@ -125,9 +125,11 @@ const SearchForFilm = (props) => {
         <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
-            // key={movie.imdbID}
+            key={movie.imdbID}
             movie_title={movie.Title}
             movie_posterPath={movie.Poster}
+            movie_voteAverage={movie.imdbRating}
+            movie_releaseDate={movie.Year}
             onFavoriteClick={() => props.saveMovie(movie)}
             text={movie.Title ? "❤" : null}
             movie_overview={movie.Plot}

@@ -13,7 +13,7 @@ const MoviesList = (props) => {
     return props.movies.map((movie, index) => {
       return (
         <Movie
-          key={index}
+          key={movie.index}
           movie_title={movie.title?movie.title: movie.Title}
           movie_name={movie.name}
           movie_posterPath={"https://image.tmdb.org/t/p/original" + movie.poster_path}
@@ -23,7 +23,6 @@ const MoviesList = (props) => {
           onFavoriteClick={() => props.saveMovie(movie)}
           text="❤"
         ></Movie>
-
       );
     });
   };

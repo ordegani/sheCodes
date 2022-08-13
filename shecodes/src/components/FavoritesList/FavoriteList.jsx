@@ -8,6 +8,12 @@ const FavoritesList = (props) => {
         if (props.favorites === []) {
             return "empty"
         }
+        // TODO
+        //1.return(
+        //     <button onClick={removeAllFavorites}>remove all</button>
+        // )
+        //2. add movie release date+movie rating
+        
         console.log(props.favorites);
         console.log(props.movies);
         return props.favorites.map((movie, index) => {
