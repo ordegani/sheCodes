@@ -5,16 +5,20 @@ import "../Movies/MoviesList.css";
 
 const FavoritesList = (props) => {
     const Flist = () => {
-        if (props.favorites === []) {
-            return "empty"
+        if (props.favorites.length == 0) {
+           return(
+               <h3 style={{color:"yellow", margin:"10%"}}>[ I'm an empty list ]</h3>
+           )
         }
         // TODO
-        //1.return(
-        //     <button onClick={removeAllFavorites}>remove all</button>
-        // )
-        //2. css for Favorites and for top rated
+        //css for Favorites and for top rated
+        //fs
+        //refrences
         console.log(props.favorites);
         console.log(props.movies);
+
+
+        
         return props.favorites.map((movie, index) => {
             return (
                 <Movie
@@ -29,8 +33,9 @@ const FavoritesList = (props) => {
                     text="remove"
                 ></Movie>);
         });
+       
     }
-    return (<div className="movies_listContainer">{Flist()}</div>);
+    return (<div className="movies_listContainer"><button onClick={props.removeAll}>remove all</button>{Flist()}</div>);
 };
 
 const mapStateToProps = (state) => {
@@ -44,7 +49,8 @@ const mapDispatchToProps = (dispatch) => {
         deleted: (movie) => {
             console.log(movie);
             dispatch({ type: "MOVIE_DELETED", payload: movie })
-        }
+        },
+        removeAll: ()=>{dispatch ({type: "removeAll"})}
     }
 }
 

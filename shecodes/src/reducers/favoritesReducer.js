@@ -11,6 +11,9 @@ const favoriteReducer = (favorites = [], action) => {
 
         return favorites;
     };
+    if (action.type === "removeAll"){
+        favorites = [];
+    }
     return favorites;
 }
 
