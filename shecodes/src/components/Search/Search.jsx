@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useSyncExternalStore } from "react";
-import { useDispatch } from "react-redux";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movie/Movie.css";

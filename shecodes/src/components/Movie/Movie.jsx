@@ -29,7 +29,7 @@ const Movie = ({
         >
           {text}
         </button>
-        <p className="movie_overview">{movie_overview=="N/A"?"no plot overview available for this movie, sorry!":Plot? Plot: movie_overview}</p>
+        <p className="movie_overview">{movie_overview==="N/A"?"no plot overview available for this movie, sorry!":Plot? Plot: movie_overview}</p>
       </div>
       {/* <p style={{ color: "rgb(136, 9, 136)" }}>{movie_Error?movie_Error:null}</p> */}
       {/* <img className={movie_Error==="Movie not found!" ? "img":"none"} src="https://i.imgflip.com/1wfq9j.jpg" /> */}
