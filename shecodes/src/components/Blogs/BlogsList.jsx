@@ -2,7 +2,6 @@ import axios from "axios";
 import { React, useEffect, useState } from "react";
 import "./BlogsList.css";
 
-//TODO delete
 const BlogsList = () => {
   const [blogs, setBlogs] = useState([])
   useEffect(() => {
