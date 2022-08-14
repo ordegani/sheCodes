@@ -10,15 +10,7 @@ const FavoritesList = (props) => {
                <h3 style={{color:"yellow", margin:"10%"}}>[ I'm an empty list ]</h3>
            )
         }
-        // TODO
-        //css for Favorites and for top rated
-        //fs
-        //refrences
-        console.log(props.favorites);
-        console.log(props.movies);
 
-
-        
         return props.favorites.map((movie, index) => {
             return (
                 <Movie
