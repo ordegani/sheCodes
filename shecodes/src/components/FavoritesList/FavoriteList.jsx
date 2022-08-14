@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Movie from "../Movie/Movie";
 import "../Movies/MoviesList.css";
+import "./FavoriteList.css";
 
 const FavoritesList = (props) => {
     const Flist = () => {
