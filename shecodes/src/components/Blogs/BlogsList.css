@@ -1,7 +1,6 @@
 .blogs_listContainer{
     display: flex;
     justify-content: center;
-    justify-content: center;
 }
 .inner_blogs_listContainer{
     display: flex;
@@ -13,7 +12,6 @@
     max-width: 40%;
     flex-direction: row;
     align-content: flex-start;
-    
 }
 .blog{
     min-width: 80%;
