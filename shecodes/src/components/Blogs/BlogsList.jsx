@@ -15,14 +15,28 @@ const BlogsList = () => {
 
   const Blist = () => {
     return (
-      blogs.map((blog) => {
+      blogs.slice(0,blogs.length/2).map((blog) => {
         return (
           <div className="blog">
             <h2>{blog.name}</h2>
             <p>{blog.blog}</p>
           </div>)
-      }))
+      })
+      
+      )
   }
-  return (<div className="blogs_listContainer"><div className="inner_blogs_listContainer">{Blist()}</div></div>);
+  const Blist2 =()=>{
+    return (
+      blogs.slice(blogs.length/2, blogs.length).map((blog) => {
+        return (
+          <div className="blog">
+            <h2>{blog.name}</h2>
+            <p>{blog.blog}</p>
+          </div>)
+      })
+      
+      )
+  }
+  return (<div className="blogs_listContainer"><div className="inner_blogs_listContainer" style={{border:"red solid 2px"}}>{Blist()}</div><div className="inner_blogs_listContainer" style={{border:"red solid 2px"}}>{Blist2()}</div></div>);
 }
 export default BlogsList;

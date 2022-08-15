@@ -1,19 +1,23 @@
 .blogs_listContainer{
     display: flex;
     justify-content: center;
+    justify-content: center;
 }
 .inner_blogs_listContainer{
     display: flex;
+    gap: 2rem;
     justify-content: space-around;
-    align-items: stretch;
     flex-wrap: wrap;
     margin-top: 2vh;
     color: white;
-    max-width: 90%;
+    max-width: 40%;
+    flex-direction: row;
+    align-content: flex-start;
+    
 }
 .blog{
-    min-width: 40%;
-    max-width: 40%;
+    min-width: 80%;
+    max-width: 80%;
     text-align: center;
     border: grey 2px double;
     padding: 2rem;
