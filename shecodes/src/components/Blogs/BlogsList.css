@@ -5,8 +5,8 @@
 .inner_blogs_listContainer{
     display: flex;
     gap: 2rem;
-    align-content: space-around;
     justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
     margin-top: 2vh;
     color: white;
@@ -18,9 +18,7 @@
     text-align: center;
     border: grey 2px double;
     padding: 2rem;
-}
-.secondary{
-    background-color: khaki;
+    height: fit-content;
 }
 .blog>:nth-child(1){
     text-decoration-line: underline;
