@@ -4,7 +4,6 @@
 }
 .inner_blogs_listContainer{
     display: flex;
-    gap: 2rem;
     justify-content: space-around;
     align-items: stretch;
     flex-wrap: wrap;
