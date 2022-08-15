@@ -37,6 +37,6 @@ const BlogsList = () => {
       
       )
   }
-  return (<div className="blogs_listContainer"><div className="inner_blogs_listContainer" style={{border:"red solid 2px"}}>{Blist()}</div><div className="inner_blogs_listContainer" style={{border:"red solid 2px"}}>{Blist2()}</div></div>);
+  return (<div className="blogs_listContainer"><div className="inner_blogs_listContainer">{Blist()}</div><div className="inner_blogs_listContainer">{Blist2()}</div></div>);
 }
 export default BlogsList;
