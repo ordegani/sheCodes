@@ -19,7 +19,9 @@
     border: grey 2px double;
     padding: 2rem;
 }
+.secondary{
+    background-color: khaki;
+}
 .blog>:nth-child(1){
     text-decoration-line: underline;
-    font-size: 125%;
 }

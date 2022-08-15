@@ -18,7 +18,7 @@ const BlogsList = () => {
       blogs.map((blog) => {
         return (
           <div className="blog">
-            <p>{blog.name}</p>
+            <h2>{blog.name}</h2>
             <p>{blog.blog}</p>
           </div>)
       }))
