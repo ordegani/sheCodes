@@ -5,12 +5,12 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 // import path from 'path';
 // const { request } = require('http');
-
 // const publicDirectory = path.join(__dirname, 'client/build')
 // app.use(express.static(publicDirectory))
 const app = express();
-app.use(cors())
-app.use(express.json())
+const jwt = require ('jsonwebtoken');
+app.use(cors());
+app.use(express.json());
 const port = 5000;
 
 //config
