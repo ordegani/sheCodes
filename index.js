@@ -4,11 +4,11 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 // import jwt from 'jsonwebtoken';
-
 // import path from 'path';
 // const { request } = require('http');
 // const publicDirectory = path.join(__dirname, 'client/build')
 // app.use(express.static(publicDirectory))
+
 const app = express();
 app.use(express.json());
 app.use(cors());
