@@ -3,15 +3,17 @@ import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+// import jwt from 'jsonwebtoken';
+
 // import path from 'path';
 // const { request } = require('http');
 // const publicDirectory = path.join(__dirname, 'client/build')
 // app.use(express.static(publicDirectory))
 const app = express();
-const jwt = require ('jsonwebtoken');
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 const port = 5000;
+const token = jwt;
 
 //config
 const connection_url = process.env.connection_url;
