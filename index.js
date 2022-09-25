@@ -3,7 +3,7 @@ import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-
+// import jwt from 'jsonwebtoken';
 // import path from 'path';
 // const { request } = require('http');
 // const publicDirectory = path.join(__dirname, 'client/build')
