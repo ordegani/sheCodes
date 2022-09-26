@@ -3,7 +3,8 @@ import { } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-// import jwt from 'jsonwebtoken';
+import { auth } from 'express-openid-connect';
+// not needed:
 // import path from 'path';
 // const { request } = require('http');
 // const publicDirectory = path.join(__dirname, 'client/build')
@@ -13,7 +14,18 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const port = 5000;
-const token = jwt;
+
+//Auth0
+// const { auth } = require('express-openid-connect');
+app.use(
+  auth({
+    issuerBaseURL: process.env.issuerBaseURL,
+    baseURL: process.env.auto_baseURL,
+    clientID: process.env.clientID,
+    secret: process.env.secret,
+    idpLogout: true,
+  })
+);
 
 //config
 const connection_url = process.env.connection_url;
