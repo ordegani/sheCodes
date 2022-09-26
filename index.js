@@ -17,7 +17,7 @@ app.use(cors());
 const port = 5000;
 
 //Auth0
-// const { auth } = require('express-openid-connect');
+const { auth } = require('express-openid-connect');
 app.use(
   dotenv.config(auth)({
     issuerBaseURL: process.env.issuerBaseURL,
