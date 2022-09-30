@@ -1,6 +1,5 @@
 import blogs from "./schemas/blog.js";
-import { } from 'dotenv/config';
-// require ('dotenv').config();
+import {  } from 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -17,9 +16,9 @@ app.use(cors());
 const port = 5000;
 
 //Auth0
-const { auth } = require('express-openid-connect');
+// const { auth } = require('express-openid-connect');
 app.use(
-  dotenv.config(auth)({
+ auth({
     issuerBaseURL: process.env.issuerBaseURL,
     baseURL: process.env.auto_baseURL,
     clientID: process.env.clientID,
