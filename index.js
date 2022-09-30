@@ -20,9 +20,9 @@ const port = 5000;
 app.use(
  auth({
     issuerBaseURL: process.env.issuerBaseURL,
-    baseURL: process.env.auto_baseURL,
+    baseURL: process.env.baseURL,
     clientID: process.env.clientID,
-    secret: process.env.SECRET,
+    secret: process.env.secret,
     idpLogout: true,
   })
 );
