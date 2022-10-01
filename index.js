@@ -14,7 +14,7 @@ import { auth } from 'express-openid-connect';
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 5000;
+const port = 3000;
 
 //Auth0
 // const { auth } = require('express-openid-connect');
@@ -22,8 +22,8 @@ const port = 5000;
 app.use(
  auth({
     issuerBaseURL: process.env.issuerBaseURL,
-    baseURL: 'http://localhost:3001',
-    clientID: process.env.clientID,
+    baseURL: 'http://localhost:3000',
+    clientID:process.env.clientID,
     secret: process.env.secret,
     idpLogout: true,
   })

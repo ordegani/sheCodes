@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers/index";
 import { Provider } from 'react-redux'
+// import { Auth0Provider } from "@auth0/auth0-react"
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
