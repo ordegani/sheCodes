@@ -1,5 +1,5 @@
 import blogs from "./schemas/blog.js";
-import {  } from 'dotenv/config';
+import { } from 'dotenv/config';
 // import * as dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
@@ -20,10 +20,10 @@ const port = 3000;
 // const { auth } = require('express-openid-connect');
 // const result = dotenv.config()
 app.use(
- auth({
+  auth({
     issuerBaseURL: process.env.issuerBaseURL,
     baseURL: 'http://localhost:3000',
-    clientID:process.env.clientID,
+    clientID: process.env.clientID,
     secret: process.env.secret,
     idpLogout: true,
   })
