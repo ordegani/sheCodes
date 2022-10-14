@@ -1,6 +1,6 @@
 import blogs from "./schemas/blog.js";
 import { } from 'dotenv/config';
-// import * as dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -20,15 +20,15 @@ const port = 5000;
 // const { auth } = require('express-openid-connect');
 // const result = dotenv.config()
 
-// app.use(
-//   auth({
-//     issuerBaseURL: process.env.issuerBaseURL,
-//     baseURL: 'http://localhost:3000',
-//     clientID: process.env.clientID,
-//     secret: process.env.secret,
-//     idpLogout: true,
-//   })
-// );
+app.use(
+  auth({
+    issuerBaseURL: process.env.issuerBaseURL,
+    baseURL: 'http://localhost:3000',
+    clientID: process.env.clientID,
+    secret: process.env.secret,
+    idpLogout: true,
+  })
+);
 
 //config
 const connection_url = process.env.connection_url;
