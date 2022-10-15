@@ -93,8 +93,8 @@ const SearchForFilm = (props) => {
                 ▶
           </button>
             </div>
-{/* 
-            <h6 style={{ color: " rgb(255, 234, 0)" }}>Advanced search:</h6> */}
+
+            <h6 style={{ color: " rgb(255, 234, 0)" }}>Advanced search:</h6>
             <input
               className="search-field2"
               placeholder="2022"
