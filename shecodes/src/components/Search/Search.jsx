@@ -81,7 +81,7 @@ const SearchForFilm = (props) => {
       <div className="inner_Scontainer">
         <div className="top_Section">
           <form onSubmit={getSearch} className="search-form">
-            <div>
+       
               <input
                 className="search-field"
                 placeholder="choose film"
@@ -89,12 +89,6 @@ const SearchForFilm = (props) => {
                 value={search}
                 onChange={updateSearch}
               />
-              <button className="search-button" type="Submit">
-                ▶
-          </button>
-            </div>
-
-            <h6 style={{ color: " rgb(255, 234, 0)" }}>Advanced search:</h6>
             <input
               className="search-field2"
               placeholder="2022"
@@ -109,14 +103,16 @@ const SearchForFilm = (props) => {
             </select>
             <div>
             </div>
-          </form>
-
-          <button className="recognition_Button" onClick={speechMode}>
+            <button className="recognition_Button" onClick={speechMode}>
             <img width="30rem" height="30rem"
               src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
                 : "https://thumbs.dreamstime.com/b/recording-symbol-isolated-white-background-record-icon-189850773.jpg"}
             />
           </button>
+          <button className="search-button" type="Submit">
+                ▶
+          </button>
+          </form>
         </div>
         <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>

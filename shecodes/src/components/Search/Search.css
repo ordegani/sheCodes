@@ -37,3 +37,23 @@
 .none{
     display: none;
 } */
+.search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    height: 7vh;
+    /* border: purple 1px solid; */
+    margin-top: 2vh;
+}
+/* .top_Section{
+    display: flex;
+    justify-content: center;
+    border: aquamarine 1px solid;
+} */
+.search-field3 , .search-field2, .search-field{
+    height: 100 !important;
+}
+.search-field3, .recognition_Button{
+    margin-right: 2rem;
+}
+
