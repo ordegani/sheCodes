@@ -109,7 +109,7 @@ const SearchForFilm = (props) => {
                 : "https://thumbs.dreamstime.com/b/recording-symbol-isolated-white-background-record-icon-189850773.jpg"}
             />
           </button>
-          <button className="search-button" type="Submit">
+          <button className="search-button" type="Submit" style={{ backgroundColor:"yellow"}}>
                 ▶
           </button>
           </form>

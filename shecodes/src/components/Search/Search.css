@@ -41,9 +41,9 @@
     display: flex;
     flex-direction: row;
     justify-content:center;
-    height: 7vh;
+    height: fit-content;
     /* border: purple 1px solid; */
-    margin-top: 2vh;
+
 }
 /* .top_Section{
     display: flex;
@@ -54,6 +54,17 @@
     height: 100 !important;
 }
 .search-field3, .recognition_Button{
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
+.top_Section{
+    border-top: purple 1px solid;
+    border-bottom: purple 1px solid;
+    margin-top: 2vh;
+}
+.inner_Scontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
