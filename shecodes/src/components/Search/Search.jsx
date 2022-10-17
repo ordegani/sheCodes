@@ -81,14 +81,14 @@ const SearchForFilm = (props) => {
       <div className="inner_Scontainer">
         <div className="top_Section">
           <form onSubmit={getSearch} className="search-form">
-       
-              <input
-                className="search-field"
-                placeholder="choose film"
-                type="text"
-                value={search}
-                onChange={updateSearch}
-              />
+
+            <input
+              className="search-field"
+              placeholder="choose film"
+              type="text"
+              value={search}
+              onChange={updateSearch}
+            />
             <input
               className="search-field2"
               placeholder="2022"
@@ -104,13 +104,13 @@ const SearchForFilm = (props) => {
             <div>
             </div>
             <button className="recognition_Button" onClick={speechMode}>
-            <img width="30rem" height="30rem"
-              src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
-                : "https://thumbs.dreamstime.com/b/recording-symbol-isolated-white-background-record-icon-189850773.jpg"}
-            />
-          </button>
-          <button className="search-button" type="Submit" style={{ backgroundColor:"yellow"}}>
-                ▶
+              <img width="30rem" height="30rem"
+                src={!i ? "https://lh3.googleusercontent.com/zSPNQP5Q3gVkoQ1TsYI9AiTOoyColTI97rcFVhiQrusfAzbGUae7FULRR2Wr1qnH1-I=w24"
+                  : "https://thumbs.dreamstime.com/b/recording-symbol-isolated-white-background-record-icon-189850773.jpg"}
+              />
+            </button>
+            <button className="search-button" type="Submit" style={{ backgroundColor: "yellow" }}>
+              ▶
           </button>
           </form>
         </div>
