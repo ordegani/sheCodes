@@ -84,14 +84,14 @@ const SearchForFilm = (props) => {
 
             <input
               className="search-field"
-              placeholder="choose film"
+              placeholder="query"
               type="text"
               value={search}
               onChange={updateSearch}
             />
             <input
               className="search-field2"
-              placeholder="2022"
+              placeholder="year"
               type="text"
               onChange={updateYearSearch}
               value={yearSearch}
