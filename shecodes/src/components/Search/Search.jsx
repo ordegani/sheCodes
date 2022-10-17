@@ -114,7 +114,7 @@ const SearchForFilm = (props) => {
           </button>
           </form>
         </div>
-        <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="200px" width="400px" /> : null}</div>
+        <div>{movie.Error === "Movie not found!" ? <img src="https://i.imgflip.com/1wfq9j.jpg" height="400px" width="400px" /> : null}</div>
         <div className={query === "" ? "none" : "SmovieContainer"}>
           <Movie
             key={movie.imdbID}

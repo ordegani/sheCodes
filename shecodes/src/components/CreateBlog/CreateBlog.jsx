@@ -14,8 +14,8 @@ const CreateBlog = () => {
     return (
         <div className="new_blogContainer">
             <form className="form">
-                <label>
-                    WRITE ▶</label>
+                {/* <label>
+                   WRITE ▶</label> */}
                 <input className="newName" type="text" required placeholder="your blog title here" onChange={(e) => setName(e.target.value)} />
                 <input className="newBlog" required placeholder="Get creative here" onChange={(el) => setValue(el.target.value)} />
                 <button type="submit" onClick={onBlogClick}> POST 🎬  </button>
