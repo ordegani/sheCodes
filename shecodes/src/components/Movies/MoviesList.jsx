@@ -14,7 +14,7 @@ const MoviesList = (props) => {
       return (
         <Movie
           key={movie.index}
-          movie_title={movie.title?movie.title: movie.Title}
+          movie_title={movie.title ? movie.title : movie.Title}
           movie_name={movie.name}
           movie_posterPath={"https://image.tmdb.org/t/p/original" + movie.poster_path}
           movie_voteAverage={movie.vote_average}

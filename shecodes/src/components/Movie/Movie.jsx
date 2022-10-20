@@ -20,8 +20,8 @@ const Movie = ({
           {movie_title ? movie_title : movie_name}
         </div>
         <img src={movie_posterPath ? movie_posterPath : null} width="300" height="300"></img>
-        <div className="movie_releaseDate"> {movie_releaseDate?movie_releaseDate:Year}</div>
-        <div className="movie_rating">{movie_voteAverage? movie_voteAverage:imdbID}</div>
+        <div className="movie_releaseDate"> {movie_releaseDate ? movie_releaseDate : Year}</div>
+        <div className="movie_rating">{movie_voteAverage ? movie_voteAverage : imdbID}</div>
         <button
           className="save_movie"
           onClick={() => onFavoriteClick()}
@@ -29,10 +29,8 @@ const Movie = ({
         >
           {text}
         </button>
-        <p className="movie_overview">{movie_overview==="N/A"?"no plot overview available for this movie, sorry!":Plot? Plot: movie_overview}</p>
+        <p className="movie_overview">{movie_overview === "N/A" ? "no plot overview available for this movie, sorry!" : Plot ? Plot : movie_overview}</p>
       </div>
-      {/* <p style={{ color: "rgb(136, 9, 136)" }}>{movie_Error?movie_Error:null}</p> */}
-      {/* <img className={movie_Error==="Movie not found!" ? "img":"none"} src="https://i.imgflip.com/1wfq9j.jpg" /> */}
     </div>
   );
 };
