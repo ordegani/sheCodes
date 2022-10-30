@@ -10,7 +10,6 @@ const FavoritesList = (props) => {
                <h3 style={{color:"yellow", margin:"10%"}}>[ I'm an empty list ]</h3>
            )
         }
-
         return props.favorites.map((movie, index) => {
             return (
                 <Movie
@@ -29,7 +28,6 @@ const FavoritesList = (props) => {
     }
     return (<div style={{textAlign:"center"}}><div className="movies_listContainer">{Flist()}</div><button className={props.favorites.length === 0? "none":null} style={{backgroundColor:"red"}} onClick={props.removeAll}>remove all</button></div>);
 };
-
 const mapStateToProps = (state) => {
     return {
         favorites: state.favorites,
