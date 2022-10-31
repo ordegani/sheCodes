@@ -1,0 +1,24 @@
+.newName{
+border-style: none;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+.newBlog{
+    border-style: none;
+
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 80%;
+    align-items: stretch;
+    background-color: white;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+.new_blogContainer{
+    text-align: center;
+}
+

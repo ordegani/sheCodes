@@ -14,11 +14,12 @@ const CreateBlog = () => {
     return (
         <div className="new_blogContainer">
             <form className="form">
-                <input className="newName" type="text" required placeholder="movie" onChange={(e) => setName(e.target.value)} />
-                <input className="newBlog" required placeholder="tell us what your cinematic sthoughts" onChange={(el) => setValue(el.target.value)} />
+                <input className="newName" type="text" required placeholder="Add a Nice Title" onChange={(e) => setName(e.target.value)} />
+                <input className="newBlog" size="50px" required placeholder="Start writing your post here" onChange={(el) => setValue(el.target.value)} />
+                </form>
                 <button type="submit" onClick={onBlogClick}> POST 🎬  </button>
-            </form>
-        </div>
+           
+       </div>
     )
 }
 
