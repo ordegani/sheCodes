@@ -2,15 +2,18 @@
 border-style: none;
 margin-bottom: 1rem;
 margin-top: 1rem;
+font-family: monospace;
+font-weight: bolder;
 }
 .newBlog{
     border-style: none;
+    flex-grow: 3;
 }
 .form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 75vh;
     min-width: 80%;
     align-items: stretch;
     background-color: white;
