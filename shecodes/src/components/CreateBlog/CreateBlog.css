@@ -5,7 +5,6 @@ margin-top: 1rem;
 }
 .newBlog{
     border-style: none;
-
 }
 .form{
     display: flex;
@@ -21,4 +20,6 @@ margin-top: 1rem;
 .new_blogContainer{
     text-align: center;
 }
-
+button{
+font-family: monospace;
+}
