@@ -34,4 +34,5 @@ const Movie = ({
     </div>
   );
 };
+
 export default Movie;
