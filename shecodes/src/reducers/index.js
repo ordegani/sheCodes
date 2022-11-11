@@ -8,7 +8,6 @@ export default combineReducers({
 });
 
 
-//seperate the reducers to different files (for good order in big projects)
 //redusers must be pure!! It can only use it's two parameters (=the previous state and the action value) to decide what to do!
 //for instance - they cannot make an API request
 //data massaging on the two parameters is allowed. I can loop, flter etc` if I use only the two. 
