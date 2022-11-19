@@ -22,8 +22,9 @@
 }
 .recognition_Button{
     align-items: center !important;
-    background-color: rgb(161, 154, 154) !important;
+    background-color: white !important;
     border:yellow 1px solid;
+
 }
 
 /* .Scontainer{   
