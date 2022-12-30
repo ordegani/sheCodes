@@ -4,6 +4,7 @@ import Movie from "../Movie/Movie";
 import "../Movie/Movie.css";
 import "./Search.css";
 
+
 const SearchForFilm = (props) => {
   // speechRecognition
   const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
